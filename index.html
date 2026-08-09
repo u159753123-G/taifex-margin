@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股票期貨 最低保證金查詢</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #2a2e37;
+    --text: #e8e9ec;
+    --sub: #8b8f99;
+    --accent: #e0a13c;
+    --accent2: #4caf7d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .meta { color: var(--sub); font-size: 13px; margin-bottom: 20px; }
+  input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    outline: none;
+  }
+  input[type="text"]:focus { border-color: var(--accent); }
+  .results { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .card-name { font-size: 16px; font-weight: 600; }
+  .card-code { color: var(--sub); font-size: 13px; }
+  .amount { font-size: 22px; font-weight: 700; color: var(--accent); margin-top: 6px; }
+  .amount .label { font-size: 12px; color: var(--sub); font-weight: 400; margin-right: 6px; }
+  .sub-row { display: flex; gap: 16px; margin-top: 8px; font-size: 13px; color: var(--sub); }
+  .sub-row b { color: var(--text); }
+  .empty { color: var(--sub); text-align: center; padding: 40px 0; font-size: 14px; }
+  .warn {
+    background: #2a2115;
+    border: 1px solid #55431e;
+    color: #e0c48c;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>股票期貨 最低保證金查詢</h1>
+  <div class="meta" id="meta">資料載入中...</div>
+
+  <input type="text" id="q" placeholder="輸入股票代號或名稱,例如 2330 或 台積電">
+  <div class="results" id="results"></div>
+</div>
+
+<script>
+let DATA = null;
+
+fetch('margin.json')
+  .then(r => {
+    if (!r.ok) throw new Error('margin.json 讀取失敗 (' + r.status + ')');
+    return r.json();
+  })
+  .then(json => {
+    DATA = json;
+    const meta = document.getElementById('meta');
+    const count = json.contracts ? json.contracts.length : 0;
+    meta.textContent = `資料更新時間: ${json.generated_at || '未知'} · 共 ${count} 檔股票期貨`;
+  })
+  .catch(err => {
+    document.getElementById('meta').innerHTML =
+      `<span style="color:#e07a7a">尚未找到 margin.json — 請先在同一個資料夾執行 fetch_margin_data.py 產生資料檔。</span>`;
+    console.error(err);
+  });
+
+function fmtMoney(n) {
+  if (n === null || n === undefined) return '—';
+  return 'NT$' + Math.round(n).toLocaleString('zh-TW');
+}
+
+function fmtPct(n) {
+  if (n === null || n === undefined) return '—';
+  return n.toFixed(2) + '%';
+}
+
+function render(list) {
+  const box = document.getElementById('results');
+  box.innerHTML = '';
+
+  if (!list.length) {
+    box.innerHTML = '<div class="empty">沒有符合的股票期貨,換個關鍵字試試</div>';
+    return;
+  }
+
+  // 依「原始保證金金額」由低到高排序,方便一眼看出最低保證金的合約
+  list.sort((a, b) => {
+    const av = a.init_margin_amount ?? Infinity;
+    const bv = b.init_margin_amount ?? Infinity;
+    return av - bv;
+  });
+
+  for (const c of list) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="card-name">${c.name || c.code}</div>
+        <div class="card-code">${c.code} · 每口 ${c.multiplier} 股</div>
+      </div>
+      <div class="amount">
+        <span class="label">目前最低保證金(原始保證金)</span>${fmtMoney(c.init_margin_amount)}
+      </div>
+      <div class="sub-row">
+        <span>收盤價 <b>${c.close_price ?? '—'}</b></span>
+        <span>原始保證金比例 <b>${fmtPct(c.init_pct)}</b></span>
+        <span>維持保證金比例 <b>${fmtPct(c.maint_pct)}</b></span>
+      </div>
+    `;
+    box.appendChild(card);
+  }
+}
+
+document.getElementById('q').addEventListener('input', (e) => {
+  const kw = e.target.value.trim();
+  if (!DATA || !DATA.contracts) return;
+  if (!kw) {
+    document.getElementById('results').innerHTML = '';
+    return;
+  }
+  const matched = DATA.contracts.filter(c =>
+    (c.stock_no && c.stock_no.includes(kw)) ||
+    (c.name && c.name.includes(kw)) ||
+    (c.underlying && c.underlying.includes(kw)) ||
+    (c.code && c.code.toUpperCase().includes(kw.toUpperCase()))
+  );
+  render(matched);
+});
+</script>
+</body>
+</html>
