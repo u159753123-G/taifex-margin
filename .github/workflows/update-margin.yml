@@ -1,192 +1,38 @@
-{
-  "version": 2,
-  "questions": [
-    {
-      "id": "q_5o7qbwct",
-      "title": "夜班下班後時間計畫/執行效率問題",
-      "frame": {
-        "problem": "夜班下班,時間計畫常常與執行脫鉤,且脫勾後擴散延伸到後續任務",
-        "facts": "夜班下班,時間計畫常常與執行脫鉤,且脫勾後擴散延伸到後續任務",
-        "feelings": "起床就很沮喪,延伸到後續任務",
-        "stakeholders": "主要:自己還有AI  間接:親朋",
-        "trigger": "計畫與執行不符",
-        "currentFrame": "高估夜班下班後的執行力",
-        "currentSolution": "計畫時要有B計畫/以及今日任務也要減載"
-      },
-      "status": "in_progress",
-      "isDemo": false,
-      "createdAt": "2026-08-04T15:57:11.678Z",
-      "updatedAt": "2026-08-09T15:27:47.188Z",
-      "loops": [
-        {
-          "id": "loop_my4dg9tk",
-          "index": 0,
-          "frameSnapshot": {
-            "problem": "夜班下班,時間計畫常常與執行脫鉤,且脫勾後擴散延伸到後續任務",
-            "facts": "夜班下班,時間計畫常常與執行脫鉤,且脫勾後擴散延伸到後續任務",
-            "feelings": "起床就很沮喪,延伸到後續任務",
-            "stakeholders": "主要:自己還有AI  間接:親朋",
-            "trigger": "計畫與執行不符",
-            "currentFrame": "高估夜班下班後的執行力",
-            "currentSolution": "計畫時要有B計畫/以及今日任務也要減載"
-          },
-          "reframing": {
-            "outOfBox": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false,
-              "earlierLater": "",
-              "outsideExpertise": "",
-              "hiddenFactor": "",
-              "overlookedTrait": ""
-            },
-            "rethinkGoal": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false,
-              "subGoal": "",
-              "currentGoal": "",
-              "deepGoal": ""
-            },
-            "highlight": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false,
-              "selfResolved": "",
-              "selfNoRipple": "",
-              "selfSmallWave": "",
-              "external": ""
-            },
-            "mirror": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false
-            },
-            "othersView": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false
-            }
-          },
-          "forward": {
-            "selectedFrame": "",
-            "reason": "",
-            "motivation": ""
-          },
-          "solutions": [
-            {
-              "id": "s_bf8aqch8",
-              "text": "計畫要降負荷 :夜班下班/睡眠不足時的任務排成 要有B計畫/最低可接受每日任務要達成",
-              "checked": false,
-              "status": "in_progress",
-              "nextAction": "下次夜班AI排程計畫,要請他開啟B計畫(降載模式)",
-              "note": "",
-              "updatedAt": "2026-08-04T16:02:40.291Z"
-            },
-            {
-              "id": "s_jfvdcf8o",
-              "text": "計畫時順便排除阻礙",
-              "checked": false,
-              "status": "not_started",
-              "nextAction": "前一天計畫時,排除明日最低任務的阻礙",
-              "note": "",
-              "updatedAt": "2026-08-04T16:02:15.960Z"
-            }
-          ],
-          "createdAt": "2026-08-04T15:57:11.678Z",
-          "updatedAt": "2026-08-04T16:02:40.291Z"
-        }
-      ]
-    },
-    {
-      "id": "q_t09ir2r0",
-      "title": "近期股票虧損後，為何會偏向繼續研究系統／課程／APP，而非依既有紀律實際執行？",
-      "frame": {
-        "problem": "",
-        "facts": "",
-        "feelings": "",
-        "stakeholders": "",
-        "trigger": "",
-        "currentFrame": "",
-        "currentSolution": ""
-      },
-      "loops": [
-        {
-          "id": "loop_eg61a3gk",
-          "index": 0,
-          "frameSnapshot": null,
-          "reframing": {
-            "outOfBox": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false,
-              "earlierLater": "",
-              "outsideExpertise": "",
-              "hiddenFactor": "",
-              "overlookedTrait": ""
-            },
-            "rethinkGoal": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false,
-              "subGoal": "",
-              "currentGoal": "",
-              "deepGoal": ""
-            },
-            "highlight": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false,
-              "selfResolved": "",
-              "selfNoRipple": "",
-              "selfSmallWave": "",
-              "external": ""
-            },
-            "mirror": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false
-            },
-            "othersView": {
-              "newFrame": "",
-              "note": "",
-              "observations": [],
-              "insightful": false,
-              "reviewLater": false
-            }
-          },
-          "forward": {
-            "selectedFrame": "",
-            "reason": "",
-            "motivation": ""
-          },
-          "solutions": [],
-          "createdAt": "2026-08-10T07:46:10.061Z",
-          "updatedAt": "2026-08-10T07:46:10.061Z"
-        }
-      ],
-      "status": "in_progress",
-      "isDemo": false,
-      "createdAt": "2026-08-10T07:46:10.061Z",
-      "updatedAt": "2026-08-10T09:43:55.452Z"
-    }
-  ]
-}
+name: 更新股票期貨保證金與股票現價資料
+
+on:
+  schedule:
+    # 台灣時間下午 3:10(UTC 07:10),週一到週五 —— 收盤後第一次抓
+    - cron: '10 7 * * 1-5'
+    # 台灣時間晚上 7:10(UTC 11:10),週一到週五 —— 保險補抓一次,確保資料齊全
+    - cron: '10 11 * * 1-5'
+  workflow_dispatch: {}   # 讓你可以在 Actions 頁面手動按「Run workflow」馬上測試
+
+permissions:
+  contents: write   # 要能把新的資料檔推回 repo
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 抓取並計算股票期貨保證金
+        run: python fetch_margin_data.py
+
+      - name: 抓取 TWSE/TPEx 股票現價
+        run: python fetch_stock_prices.py
+
+      - name: 把新的資料檔推回 repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add margin_latest.json "margin_*.json" stock_prices_latest.json "stock_prices_*.json"
+          git diff --cached --quiet && echo "資料沒有變動,略過 commit" || git commit -m "自動更新保證金與股票現價資料 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
