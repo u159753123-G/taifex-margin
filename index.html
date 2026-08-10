@@ -74,20 +74,20 @@
 <script>
 let DATA = null;
 
-fetch('margin.json')
+fetch('margin_latest.json')
   .then(r => {
-    if (!r.ok) throw new Error('margin.json 讀取失敗 (' + r.status + ')');
+    if (!r.ok) throw new Error('margin_latest.json 讀取失敗 (' + r.status + ')');
     return r.json();
   })
   .then(json => {
     DATA = json;
     const meta = document.getElementById('meta');
     const count = json.contracts ? json.contracts.length : 0;
-    meta.textContent = `資料更新時間: ${json.generated_at || '未知'} · 共 ${count} 檔股票期貨`;
+    meta.textContent = `交易日: ${json.trade_date || '未知'} · 資料產生時間: ${json.generated_at || '未知'} · 共 ${count} 檔股票期貨`;
   })
   .catch(err => {
     document.getElementById('meta').innerHTML =
-      `<span style="color:#e07a7a">尚未找到 margin.json — 請先在同一個資料夾執行 fetch_margin_data.py 產生資料檔。</span>`;
+      `<span style="color:#e07a7a">尚未找到 margin_latest.json — 請先在同一個資料夾執行 fetch_margin_data.py 產生資料檔。</span>`;
     console.error(err);
   });
 
