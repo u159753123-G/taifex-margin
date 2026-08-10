@@ -22,7 +22,8 @@
            (依中文簡稱是否含「小型」判斷)
 
 輸出:
-  margin.json — 給 index.html 讀取用的資料檔
+  margin_YYYY-MM-DD.json — 當天的歷史快照,不會被覆蓋,以後做漲跌/OI增減會需要
+  margin_latest.json     — 給 index.html 讀取用的「最新一筆」資料檔
 
 ⚠️ 重要提醒(請先讀完再執行):
   本腳本必須在「能連上 taifex.com.tw 的一般網路環境」下執行,
@@ -113,6 +114,21 @@ def normalize_code(s):
     return s.strip().upper()
 
 
+def normalize_date(s):
+    """把 2026/08/07 這種格式轉成 2026-08-07,期交所這邊本來就是西元年,不用轉民國。"""
+    if not s:
+        return None
+    s = str(s).strip().replace("/", "-")
+    parts = s.split("-")
+    if len(parts) == 3:
+        try:
+            y, m, d = int(parts[0]), int(parts[1]), int(parts[2])
+            return f"{y:04d}-{m:02d}-{d:02d}"
+        except ValueError:
+            return s
+    return s
+
+
 def main():
     print("== 步驟 1: 下載保證金適用比例表 ==")
     margin_raw = fetch_bytes(MARGIN_URL)
@@ -147,8 +163,11 @@ def main():
     d_col_code = find_col(daily_fields, ["交易系統代碼", "契約", "商品代號"])
     d_col_close = find_col(daily_fields, ["收盤價", "結算價"])
     d_col_expiry = find_col(daily_fields, ["到期月份", "契約月份", "到期月份(週別)"])
-    d_col_date = find_col(daily_fields, ["交易日期"])
+    d_col_date = find_col(daily_fields, ["交易日期", "日期"])
+    d_col_oi = find_col(daily_fields, ["未沖銷契約數", "未沖銷"])
+    d_col_volume = find_col(daily_fields, ["成交量"])
 
+    trade_date = None
     price_by_code = {}
     if d_col_code and d_col_close:
         for row in daily_rows:
@@ -156,13 +175,22 @@ def main():
             close = to_float(row.get(d_col_close))
             if not code or close is None:
                 continue
+            if trade_date is None and d_col_date:
+                trade_date = normalize_date(row.get(d_col_date))
             expiry = (row.get(d_col_expiry) or "").strip()
             # 同一檔股票期貨可能有近月/遠月多筆,取「到期月份字串排序最小」當近月
             prev = price_by_code.get(code)
             if prev is None or (expiry and expiry < prev["expiry"]):
-                price_by_code[code] = {"close": close, "expiry": expiry}
+                price_by_code[code] = {
+                    "close": close,
+                    "expiry": expiry,
+                    "open_interest": to_float(row.get(d_col_oi)) if d_col_oi else None,
+                    "volume": to_float(row.get(d_col_volume)) if d_col_volume else None,
+                }
     else:
-        print("!! 每日行情欄位比對失敗,margin.json 會先只輸出保證金比例,沒有金額。")
+        print("!! 每日行情欄位比對失敗,margin_latest.json 會先只輸出保證金比例,沒有金額。")
+
+    print(f"[診斷] 這次抓到的交易日期(trade_date): {trade_date}")
 
     print(f"\n共取得 {len(price_by_code)} 檔契約的收盤價對照。")
 
@@ -231,10 +259,15 @@ def main():
             "init_pct": init_pct,
             "close_price": close_price,
             "init_margin_amount": init_amount,
+            "open_interest": price_info["open_interest"] if price_info else None,
+            "volume": price_info["volume"] if price_info else None,
         })
+
+    date_tag = trade_date or datetime.now().strftime("%Y-%m-%d")
 
     out = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "trade_date": trade_date,
         "source": {
             "margin_ratio": MARGIN_URL,
             "daily_price": DAILY_URL,
@@ -242,12 +275,14 @@ def main():
         "contracts": result,
     }
 
-    with open("margin.json", "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
+    dated_filename = f"margin_{date_tag}.json"
+    for filename in (dated_filename, "margin_latest.json"):
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=2)
 
     have_price = sum(1 for r in result if r["init_margin_amount"] is not None)
     print(f"\n完成!共 {len(result)} 檔股票期貨,其中 {have_price} 檔有算出金額。")
-    print("已輸出 margin.json,可搭配 index.html 使用。")
+    print(f"已輸出 {dated_filename} 與 margin_latest.json,可搭配 index.html 使用。")
 
 
 if __name__ == "__main__":
