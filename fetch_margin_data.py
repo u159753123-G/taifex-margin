@@ -115,11 +115,19 @@ def normalize_code(s):
 
 
 def normalize_date(s):
-    """把 2026/08/07 這種格式轉成 2026-08-07,期交所這邊本來就是西元年,不用轉民國。"""
+    """把各種日期格式(2026/08/07、20260807、2026-08-07)統一轉成 2026-08-07。"""
     if not s:
         return None
-    s = str(s).strip().replace("/", "-")
-    parts = s.split("-")
+    s = str(s).strip()
+    digits = re.sub(r"\D", "", s)
+    if len(digits) == 8:
+        y, m, d = digits[:4], digits[4:6], digits[6:8]
+        try:
+            return f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
+        except ValueError:
+            return s
+    s2 = s.replace("/", "-")
+    parts = s2.split("-")
     if len(parts) == 3:
         try:
             y, m, d = int(parts[0]), int(parts[1]), int(parts[2])
