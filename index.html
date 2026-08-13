@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>股票期貨 最低保證金查詢</title>
+<title>股期排行</title>
 <style>
   :root {
     --bg: #0f1115;
@@ -12,7 +12,8 @@
     --text: #e8e9ec;
     --sub: #8b8f99;
     --accent: #e0a13c;
-    --accent2: #4caf7d;
+    --up: #d9534f;
+    --down: #4caf7d;
   }
   * { box-sizing: border-box; }
   body {
@@ -20,138 +21,639 @@
     font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
     background: var(--bg);
     color: var(--text);
-    padding: 24px 16px 60px;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; }
-  h1 { font-size: 20px; margin: 0 0 4px; }
-  .meta { color: var(--sub); font-size: 13px; margin-bottom: 20px; }
-  input[type="text"] {
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    outline: none;
-  }
-  input[type="text"]:focus { border-color: var(--accent); }
-  .results { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px 16px;
-  }
-  .card-top { display: flex; justify-content: space-between; align-items: baseline; }
-  .card-name { font-size: 16px; font-weight: 600; }
-  .card-code { color: var(--sub); font-size: 13px; }
-  .amount { font-size: 22px; font-weight: 700; color: var(--accent); margin-top: 6px; }
-  .amount .label { font-size: 12px; color: var(--sub); font-weight: 400; margin-right: 6px; }
-  .sub-row { display: flex; gap: 16px; margin-top: 8px; font-size: 13px; color: var(--sub); }
-  .sub-row b { color: var(--text); }
-  .empty { color: var(--sub); text-align: center; padding: 40px 0; font-size: 14px; }
-  .warn {
-    background: #2a2115;
-    border: 1px solid #55431e;
-    color: #e0c48c;
-    padding: 10px 14px;
-    border-radius: 10px;
+    padding: 20px 16px 60px;
     font-size: 13px;
-    margin-top: 16px;
   }
+  .wrap { max-width: 1400px; margin: 0 auto; }
+  h1 { font-size: 18px; margin: 0 0 4px; font-weight: 600; }
+  .meta { color: var(--sub); font-size: 12px; margin-bottom: 16px; }
+  .meta .err { color: #e07a7a; }
+
+  .legend {
+    font-size: 11px;
+    color: var(--sub);
+    margin-bottom: 14px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .legend b { color: var(--text); font-weight: 600; }
+  .legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
+  .dot-raw { background: #4a90d9; }
+  .dot-calc { background: var(--accent); }
+
+  .filters {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px 14px;
+  }
+  .filters label {
+    display: block;
+    font-size: 11px;
+    color: var(--sub);
+    margin-bottom: 4px;
+  }
+  .filters input, .filters select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .quick-answer {
+    display: none;
+    margin-bottom: 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .quick-answer.show { display: flex; }
+  .quick-card {
+    background: var(--card);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 220px;
+    flex: 1 1 220px;
+  }
+  .quick-card .qc-name { font-size: 14px; font-weight: 600; }
+  .quick-card .qc-sub { font-size: 11px; color: var(--sub); margin-top: 2px; }
+  .quick-card .qc-label { font-size: 11px; color: var(--sub); margin-top: 10px; }
+  .quick-card .qc-amount { font-size: 24px; font-weight: 700; color: var(--accent); margin-top: 2px; }
+  .quick-card .qc-row { display: flex; gap: 14px; margin-top: 8px; font-size: 12px; color: var(--sub); }
+  .quick-card .qc-row b { color: var(--text); }
+
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 1300px; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--card);
+    text-align: right;
+    padding: 9px 10px;
+    font-weight: 600;
+    color: var(--sub);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid var(--border);
+  }
+  thead th:first-child, thead th:nth-child(2) { text-align: left; }
+  thead th .arrow { font-size: 10px; margin-left: 2px; color: var(--accent); }
+  thead th.raw::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #4a90d9; margin-right: 5px; }
+  thead th.calc::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 5px; }
+  tbody td {
+    padding: 8px 10px;
+    text-align: right;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody td:first-child, tbody td:nth-child(2) { text-align: left; }
+  tbody tr:hover { background: #1d212b; }
+  .name-cell b { display: block; font-size: 13px; }
+  .name-cell span { color: var(--sub); font-size: 11px; }
+  .up { color: var(--up); }
+  .down { color: var(--down); }
+  .empty { text-align: center; padding: 40px 0; color: var(--sub); }
+
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tab {
+    background: none;
+    border: none;
+    color: var(--sub);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 4px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+  .view { display: none; }
+  .view.active { display: block; }
+
+  .rank-table { border-collapse: collapse; width: 100%; max-width: 640px; }
+  .rank-table th {
+    text-align: right;
+    padding: 8px 10px;
+    color: var(--sub);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+  .rank-table th:first-child, .rank-table th:nth-child(2), .rank-table th:nth-child(3) { text-align: left; }
+  .rank-table td {
+    padding: 8px 10px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+  }
+  .rank-table td:first-child, .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .rank-table tr:hover { background: #1d212b; }
+
+  .block-title { font-size: 15px; margin: 0 0 10px; font-weight: 600; }
+
+  .value-rank-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  @media (min-width: 860px) {
+    .value-rank-layout { grid-template-columns: 4fr 1fr; }
+  }
+
+  .rank-block { min-width: 0; }
+
+  .persist-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  @media (min-width: 860px) {
+    .persist-block { position: sticky; top: 12px; }
+  }
+  .persist-note { font-size: 11px; color: var(--sub); margin: 0 0 12px; }
+
+  .window-picker {
+    display: flex;
+    gap: 4px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+    margin-bottom: 14px;
+  }
+  .window-picker input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .window-picker label {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--sub);
+  }
+  .window-picker input:checked + label { background: var(--accent); color: #171a21; }
+  .window-picker input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .persist-result h3 { font-size: 13px; margin: 0 0 8px; font-weight: 600; }
+  .persist-result ul { list-style: none; margin: 0; padding: 0; }
+  .persist-result li {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .persist-result li:last-child { border-bottom: none; }
+  .persist-result li span:first-child { color: var(--sub); }
+  .persist-empty { color: var(--sub); font-size: 12px; line-height: 1.5; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>股票期貨 最低保證金查詢</h1>
+  <h1>股期排行</h1>
   <div class="meta" id="meta">資料載入中...</div>
 
-  <input type="text" id="q" placeholder="輸入股票代號或名稱,例如 2330 或 台積電">
-  <div class="results" id="results"></div>
+  <div class="tabs">
+    <button class="tab active" data-view="futures">股期排行</button>
+    <button class="tab" data-view="value-rank">成交值排行</button>
+  </div>
+
+  <div class="view active" id="view-futures">
+    <div class="legend">
+      <span><span class="dot dot-raw"></span>藍點 = 交易所原始資料(直接抓的)</span>
+      <span><span class="dot dot-calc"></span>橘點 = 系統計算欄位(用原始資料算出來的)</span>
+    </div>
+
+    <div class="filters">
+      <div>
+        <label>搜尋商品(代號 / 名稱)</label>
+        <input type="text" id="f-search" placeholder="例:2330 或 台積電">
+      </div>
+      <div>
+        <label>商品類型</label>
+        <select id="f-type">
+          <option value="">全部類型</option>
+          <option value="normal">一般股票期貨</option>
+          <option value="mini">小型股票期貨</option>
+        </select>
+      </div>
+      <div>
+        <label>成交量 ≥</label>
+        <input type="number" id="f-volume" placeholder="例:10000">
+      </div>
+      <div>
+        <label>未平倉 OI ≥</label>
+        <input type="number" id="f-oi" placeholder="例:500">
+      </div>
+      <div>
+        <label>原始保證金 ≤</label>
+        <input type="number" id="f-margin" placeholder="例:50000">
+      </div>
+      <div>
+        <label>槓桿倍數 ≥</label>
+        <input type="number" id="f-leverage" placeholder="例:5" step="0.1">
+      </div>
+    </div>
+
+    <div class="quick-answer" id="quick-answer"></div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr id="thead-row"></tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="view" id="view-value-rank">
+    <div class="value-rank-layout">
+      <div class="rank-block">
+        <h2 class="block-title">成交值排行</h2>
+        <div class="meta" id="value-rank-meta"></div>
+        <div class="table-scroll">
+          <table class="rank-table">
+            <thead>
+              <tr>
+                <th>代號</th>
+                <th>名稱</th>
+                <th>收盤價</th>
+              </tr>
+            </thead>
+            <tbody id="value-rank-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="persist-block">
+        <h2 class="block-title">連續留榜</h2>
+        <p class="persist-note">同時列在最近幾個交易日成交值前15名的個股</p>
+
+        <div class="window-picker">
+          <input type="radio" id="win-3" name="persist-window" value="3" checked>
+          <label for="win-3">3天</label>
+          <input type="radio" id="win-5" name="persist-window" value="5">
+          <label for="win-5">5天</label>
+          <input type="radio" id="win-7" name="persist-window" value="7">
+          <label for="win-7">7天</label>
+        </div>
+
+        <div id="persist-result" class="persist-result"></div>
+      </aside>
+    </div>
+  </div>
 </div>
 
 <script>
-let DATA = null;
+const COLUMNS = [
+  { key: 'display_name', label: '期貨近月', type: 'raw', sortKey: 'name' },
+  { key: 'close_price',  label: '成交價',   type: 'raw' },
+  { key: 'change',       label: '漲跌',     type: 'raw' },
+  { key: 'change_pct',   label: '漲跌幅',   type: 'raw' },
+  { key: 'volume',       label: '成交量',   type: 'raw' },
+  { key: 'avg_volume',   label: 'N日均量',  type: 'calc' },
+  { key: 'amplitude',    label: '振幅',     type: 'calc' },
+  { key: 'open_interest',label: '未平倉',   type: 'raw' },
+  { key: 'oi_change',    label: 'OI增減',   type: 'calc' },
+  { key: 'underlying_display', label: '現貨標的', type: 'raw', sortKey: 'stock_no' },
+  { key: 'spot_price',   label: '現貨價格', type: 'raw' },
+  { key: 'spread',       label: '期現價差', type: 'calc' },
+  { key: 'init_margin_amount', label: '原始保證金', type: 'calc' },
+  { key: 'multiplier',   label: '契約乘數', type: 'raw' },
+  { key: 'leverage',     label: '槓桿倍數', type: 'calc' },
+];
 
-fetch('margin_latest.json')
-  .then(r => {
-    if (!r.ok) throw new Error('margin_latest.json 讀取失敗 (' + r.status + ')');
-    return r.json();
-  })
-  .then(json => {
-    DATA = json;
-    const meta = document.getElementById('meta');
-    const count = json.contracts ? json.contracts.length : 0;
-    meta.textContent = `交易日: ${json.trade_date || '未知'} · 資料產生時間: ${json.generated_at || '未知'} · 共 ${count} 檔股票期貨`;
-  })
-  .catch(err => {
-    document.getElementById('meta').innerHTML =
-      `<span style="color:#e07a7a">尚未找到 margin_latest.json — 請先在同一個資料夾執行 fetch_margin_data.py 產生資料檔。</span>`;
-    console.error(err);
+let ROWS = [];
+let STOCK_SYMBOLS = {};
+let sortKey = 'volume';
+let sortDir = -1;
+
+function fmt(n, digits) {
+  if (n === null || n === undefined || Number.isNaN(n)) return '—';
+  return Number(n).toLocaleString('zh-TW', { minimumFractionDigits: digits ?? 0, maximumFractionDigits: digits ?? 2 });
+}
+
+function fmtSigned(n, digits, suffix) {
+  if (n === null || n === undefined || Number.isNaN(n)) return '—';
+  const sign = n > 0 ? '+' : '';
+  return sign + fmt(n, digits) + (suffix || '');
+}
+
+function colorClass(n) {
+  if (n === null || n === undefined || Number.isNaN(n)) return '';
+  return n > 0 ? 'up' : n < 0 ? 'down' : '';
+}
+
+Promise.all([
+  fetch('margin_latest.json').then(r => { if (!r.ok) throw new Error('margin_latest.json ' + r.status); return r.json(); }),
+  fetch('stock_prices_latest.json').then(r => { if (!r.ok) throw new Error('stock_prices_latest.json ' + r.status); return r.json(); }).catch(() => null),
+]).then(([marginData, stockData]) => {
+  const symbols = (stockData && stockData.symbols) || {};
+  STOCK_SYMBOLS = symbols;
+
+  ROWS = (marginData.contracts || []).map(c => {
+    const spot = symbols[c.stock_no] || null;
+    const spotPrice = spot ? spot.close : null;
+    const spread = (c.close_price != null && spotPrice != null) ? c.close_price - spotPrice : null;
+    const prevClose = (c.close_price != null && c.change != null) ? c.close_price - c.change : null;
+    const amplitude = (c.high != null && c.low != null && prevClose) ? (c.high - c.low) / prevClose * 100 : null;
+    const leverage = (c.close_price != null && c.multiplier != null && c.init_margin_amount) ?
+      (c.close_price * c.multiplier) / c.init_margin_amount : null;
+
+    return {
+      ...c,
+      display_name: c.name,
+      underlying_display: c.stock_no + (spot ? ' ' + spot.name : ''),
+      spot_price: spotPrice,
+      spread,
+      amplitude,
+      leverage,
+    };
   });
 
-function fmtMoney(n) {
-  if (n === null || n === undefined) return '—';
-  return 'NT$' + Math.round(n).toLocaleString('zh-TW');
-}
+  const meta = document.getElementById('meta');
+  const genAt = marginData.generated_at || '未知';
+  const tradeDate = marginData.trade_date || '未知';
+  meta.textContent = `交易日: ${tradeDate} · 資料產生時間: ${genAt} · 共 ${ROWS.length} 檔股票期貨`;
 
-function fmtPct(n) {
-  if (n === null || n === undefined) return '—';
-  return n.toFixed(2) + '%';
-}
+  renderHead();
+  render();
+  renderValueRank();
+  loadPersistenceData();
+}).catch(err => {
+  document.getElementById('meta').innerHTML = `<span class="err">資料讀取失敗:${err.message} — 請先在同一個資料夾執行 fetch_margin_data.py 與 fetch_stock_prices.py 產生資料檔。</span>`;
+  console.error(err);
+});
 
-function render(list) {
-  const box = document.getElementById('results');
-  box.innerHTML = '';
+function renderValueRank() {
+  const meta = document.getElementById('value-rank-meta');
+  const tbody = document.getElementById('value-rank-tbody');
 
-  if (!list.length) {
-    box.innerHTML = '<div class="empty">沒有符合的股票期貨,換個關鍵字試試</div>';
+  const top15 = Object.values(STOCK_SYMBOLS)
+    .filter(s => s.market === 'TWSE' && s.value != null)
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 15);
+
+  if (!top15.length) {
+    meta.innerHTML = `<span class="err">沒有可用的上市股票成交值資料 — 請先執行 fetch_stock_prices.py 產生資料檔(需要是有 value 欄位的新版資料)。</span>`;
+    tbody.innerHTML = '';
     return;
   }
 
-  // 依「原始保證金金額」由低到高排序,方便一眼看出最低保證金的合約
-  list.sort((a, b) => {
+  meta.textContent = `交易日: ${STOCK_SYMBOLS ? (Object.values(STOCK_SYMBOLS)[0]?.tradeDate || '未知') : '未知'} · 僅計算上市(TWSE)股票`;
+
+  tbody.innerHTML = top15.map(s => `
+    <tr>
+      <td>${s.symbol}</td>
+      <td>${s.name || '—'}</td>
+      <td>${fmt(s.close, 2)}</td>
+    </tr>
+  `).join('');
+}
+
+let PERSIST_DAILY_TOP15 = [];
+let PERSIST_NAME_LOOKUP = {};
+
+async function loadPersistenceData() {
+  const result = document.getElementById('persist-result');
+  result.innerHTML = '<div class="persist-empty">留榜名單計算中...</div>';
+
+  let dates = [];
+  try {
+    const idxRes = await fetch('trade_dates.json');
+    if (idxRes.ok) {
+      const idx = await idxRes.json();
+      dates = idx.dates || [];
+    }
+  } catch (e) {
+    result.innerHTML = '<div class="persist-empty">找不到 trade_dates.json — 請先執行新版的 fetch_stock_prices.py。</div>';
+    return;
+  }
+
+  if (!dates.length) {
+    result.innerHTML = '<div class="persist-empty">尚無交易日快照資料。</div>';
+    return;
+  }
+
+  const recentDates = dates.slice(0, 7);
+  const snapshots = await Promise.all(recentDates.map(d =>
+    fetch(`stock_prices_${d}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+  ));
+
+  PERSIST_NAME_LOOKUP = {};
+  PERSIST_DAILY_TOP15 = snapshots.map(snap => {
+    if (!snap) return null;
+    const list = Object.values(snap.symbols || {})
+      .filter(s => s.market === 'TWSE' && s.value != null)
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 15);
+    list.forEach(s => { PERSIST_NAME_LOOKUP[s.symbol] = s.name; });
+    return new Set(list.map(s => s.symbol));
+  });
+
+  renderPersistWindow();
+}
+
+function renderPersistWindow() {
+  const result = document.getElementById('persist-result');
+  const picked = document.querySelector('input[name="persist-window"]:checked');
+  const w = picked ? parseInt(picked.value, 10) : 3;
+
+  const slice = PERSIST_DAILY_TOP15.slice(0, w);
+  const availableDays = slice.filter(s => s !== null).length;
+
+  if (slice.length < w || slice.some(s => s === null)) {
+    result.innerHTML = `<div class="persist-empty">資料還在累積,目前有 ${availableDays} 天快照(需要 ${w} 天)</div>`;
+    return;
+  }
+
+  let intersection = slice[0];
+  for (let i = 1; i < slice.length; i++) {
+    intersection = new Set([...intersection].filter(code => slice[i].has(code)));
+  }
+
+  const codes = [...intersection];
+  result.innerHTML = `
+    <h3>連續 ${w} 天留榜(${codes.length} 檔)</h3>
+    ${codes.length
+      ? `<ul>${codes.map(c => `<li><span>${c}</span><span>${PERSIST_NAME_LOOKUP[c] || ''}</span></li>`).join('')}</ul>`
+      : `<div class="persist-empty">目前沒有股票連續 ${w} 天都在前15名</div>`}
+  `;
+}
+
+document.querySelectorAll('input[name="persist-window"]').forEach(input => {
+  input.addEventListener('change', renderPersistWindow);
+});
+
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('view-' + btn.dataset.view).classList.add('active');
+  });
+});
+
+function renderHead() {
+  const tr = document.getElementById('thead-row');
+  tr.innerHTML = '';
+  COLUMNS.forEach(col => {
+    const th = document.createElement('th');
+    th.className = col.type;
+    th.dataset.key = col.sortKey || col.key;
+    th.innerHTML = col.label + '<span class="arrow"></span>';
+    th.addEventListener('click', () => {
+      const key = col.sortKey || col.key;
+      if (sortKey === key) { sortDir *= -1; } else { sortKey = key; sortDir = -1; }
+      render();
+    });
+    tr.appendChild(th);
+  });
+}
+
+function getFilters() {
+  return {
+    search: document.getElementById('f-search').value.trim().toLowerCase(),
+    type: document.getElementById('f-type').value,
+    volume: parseFloat(document.getElementById('f-volume').value) || null,
+    oi: parseFloat(document.getElementById('f-oi').value) || null,
+    margin: parseFloat(document.getElementById('f-margin').value) || null,
+    leverage: parseFloat(document.getElementById('f-leverage').value) || null,
+  };
+}
+
+function applyFilters(rows, f) {
+  return rows.filter(r => {
+    if (f.search) {
+      const hay = (r.code + r.name + r.stock_no + (r.underlying || '')).toLowerCase();
+      if (!hay.includes(f.search)) return false;
+    }
+    if (f.type === 'normal' && r.multiplier !== 2000) return false;
+    if (f.type === 'mini' && r.multiplier !== 100) return false;
+    if (f.volume != null && !(r.volume >= f.volume)) return false;
+    if (f.oi != null && !(r.open_interest >= f.oi)) return false;
+    if (f.margin != null && !(r.init_margin_amount != null && r.init_margin_amount <= f.margin)) return false;
+    if (f.leverage != null && !(r.leverage != null && r.leverage >= f.leverage)) return false;
+    return true;
+  });
+}
+
+function renderQuickAnswer(searchText) {
+  const box = document.getElementById('quick-answer');
+  if (!searchText) {
+    box.classList.remove('show');
+    box.innerHTML = '';
+    return;
+  }
+
+  const matched = ROWS.filter(r =>
+    (r.code + r.name + r.stock_no + (r.underlying || '')).toLowerCase().includes(searchText)
+  ).sort((a, b) => {
     const av = a.init_margin_amount ?? Infinity;
     const bv = b.init_margin_amount ?? Infinity;
     return av - bv;
+  }).slice(0, 6);
+
+  if (!matched.length) {
+    box.classList.add('show');
+    box.innerHTML = `<div class="quick-card" style="border-color: var(--border);">
+      <div class="qc-name">沒有符合「${searchText}」的股票期貨</div>
+    </div>`;
+    return;
+  }
+
+  box.classList.add('show');
+  box.innerHTML = matched.map(r => `
+    <div class="quick-card">
+      <div class="qc-name">${r.name}</div>
+      <div class="qc-sub">${r.code} · 每口 ${fmt(r.multiplier, 0)} 股 · ${r.underlying_display || '—'}</div>
+      <div class="qc-label">目前最低保證金(原始保證金)</div>
+      <div class="qc-amount">${r.init_margin_amount != null ? 'NT$' + fmt(r.init_margin_amount, 0) : '—'}</div>
+      <div class="qc-row">
+        <span>成交價 <b>${fmt(r.close_price, 2)}</b></span>
+        <span>槓桿 <b>${r.leverage != null ? fmt(r.leverage, 2) + 'x' : '—'}</b></span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function render() {
+  const f = getFilters();
+  let rows = applyFilters(ROWS, f);
+  renderQuickAnswer(f.search);
+
+  rows.sort((a, b) => {
+    let av = a[sortKey], bv = b[sortKey];
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    if (typeof av === 'string') return av.localeCompare(bv) * sortDir;
+    return (av - bv) * sortDir;
   });
 
-  for (const c of list) {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <div class="card-top">
-        <div class="card-name">${c.name || c.code}</div>
-        <div class="card-code">${c.code} · 每口 ${c.multiplier} 股</div>
-      </div>
-      <div class="amount">
-        <span class="label">目前最低保證金(原始保證金)</span>${fmtMoney(c.init_margin_amount)}
-      </div>
-      <div class="sub-row">
-        <span>收盤價 <b>${c.close_price ?? '—'}</b></span>
-        <span>原始保證金比例 <b>${fmtPct(c.init_pct)}</b></span>
-        <span>維持保證金比例 <b>${fmtPct(c.maint_pct)}</b></span>
-      </div>
+  document.querySelectorAll('#thead-row th .arrow').forEach(a => a.textContent = '');
+  const activeTh = document.querySelector(`#thead-row th[data-key="${sortKey}"] .arrow`);
+  if (activeTh) activeTh.textContent = sortDir === 1 ? '▲' : '▼';
+
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="${COLUMNS.length}" class="empty">沒有符合條件的股票期貨</td></tr>`;
+    return;
+  }
+
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="name-cell"><b>${r.name}</b><span>${r.code} · ${r.tier || ''}</span></td>
+      <td>${fmt(r.close_price, 2)}</td>
+      <td class="${colorClass(r.change)}">${fmtSigned(r.change, 2)}</td>
+      <td class="${colorClass(r.change_pct)}">${fmtSigned(r.change_pct, 2, '%')}</td>
+      <td>${fmt(r.volume, 0)}</td>
+      <td>${fmt(r.avg_volume, 0)}<span style="color:var(--sub)"> (${r.avg_volume_days ?? 0}日)</span></td>
+      <td>${r.amplitude != null ? fmt(r.amplitude, 2) + '%' : '—'}</td>
+      <td>${fmt(r.open_interest, 0)}</td>
+      <td class="${colorClass(r.oi_change)}">${fmtSigned(r.oi_change, 0)}</td>
+      <td>${r.underlying_display || '—'}</td>
+      <td>${fmt(r.spot_price, 2)}</td>
+      <td class="${colorClass(r.spread)}">${fmtSigned(r.spread, 2)}</td>
+      <td>${fmt(r.init_margin_amount, 0)}</td>
+      <td>${fmt(r.multiplier, 0)}</td>
+      <td>${r.leverage != null ? fmt(r.leverage, 2) + 'x' : '—'}</td>
     `;
-    box.appendChild(card);
+    tbody.appendChild(tr);
   }
 }
 
-document.getElementById('q').addEventListener('input', (e) => {
-  const kw = e.target.value.trim();
-  if (!DATA || !DATA.contracts) return;
-  if (!kw) {
-    document.getElementById('results').innerHTML = '';
-    return;
-  }
-  const matched = DATA.contracts.filter(c =>
-    (c.stock_no && c.stock_no.includes(kw)) ||
-    (c.name && c.name.includes(kw)) ||
-    (c.underlying && c.underlying.includes(kw)) ||
-    (c.code && c.code.toUpperCase().includes(kw.toUpperCase()))
-  );
-  render(matched);
+['f-search', 'f-type', 'f-volume', 'f-oi', 'f-margin', 'f-leverage'].forEach(id => {
+  document.getElementById(id).addEventListener('input', render);
+  document.getElementById(id).addEventListener('change', render);
 });
 </script>
 </body>
