@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T14:45:32",
+  "generated_at": "2026-08-13T16:35:25",
   "trade_date": "2026-08-13",
   "source": {
     "margin_ratio": "https://www.taifex.com.tw/data_gov/taifex_open_data.asp?data_name=SingleStockFuturesMargining",
@@ -19,7 +19,14 @@
       "close_price": 190.5,
       "init_margin_amount": 77153,
       "open_interest": 7460.0,
-      "volume": 12726.0
+      "volume": 12726.0,
+      "change": -1.0,
+      "change_pct": -0.52,
+      "high": 196.0,
+      "low": 184.0,
+      "oi_change": 443.0,
+      "avg_volume_days": 4,
+      "avg_volume": 11549.0
     },
     {
       "code": "CBF",
@@ -34,7 +41,14 @@
       "close_price": 19.25,
       "init_margin_amount": 5198,
       "open_interest": 3265.0,
-      "volume": 930.0
+      "volume": 930.0,
+      "change": -0.5,
+      "change_pct": -2.53,
+      "high": 19.8,
+      "low": 19.2,
+      "oi_change": -437.0,
+      "avg_volume_days": 4,
+      "avg_volume": 899.5
     },
     {
       "code": "CCF",
@@ -49,7 +63,14 @@
       "close_price": 125.0,
       "init_margin_amount": 40500,
       "open_interest": 56281.0,
-      "volume": 46075.0
+      "volume": 46075.0,
+      "change": 0.5,
+      "change_pct": 0.4,
+      "high": 131.0,
+      "low": 123.5,
+      "oi_change": -4361.0,
+      "avg_volume_days": 4,
+      "avg_volume": 32932.2
     },
     {
       "code": "CDF",
@@ -64,7 +85,14 @@
       "close_price": 2428.0,
       "init_margin_amount": 655560,
       "open_interest": 13002.0,
-      "volume": 5973.0
+      "volume": 5973.0,
+      "change": 14.0,
+      "change_pct": 0.58,
+      "high": 2444.0,
+      "low": 2421.0,
+      "oi_change": -1123.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5639.8
     },
     {
       "code": "QFF",
@@ -79,7 +107,14 @@
       "close_price": 2428.0,
       "init_margin_amount": 32778,
       "open_interest": 48093.0,
-      "volume": 20864.0
+      "volume": 20864.0,
+      "change": 15.0,
+      "change_pct": 0.62,
+      "high": 2445.0,
+      "low": 2421.0,
+      "oi_change": -1919.0,
+      "avg_volume_days": 4,
+      "avg_volume": 22349.2
     },
     {
       "code": "CEF",
@@ -94,7 +129,14 @@
       "close_price": 128.5,
       "init_margin_amount": 34695,
       "open_interest": 1603.0,
-      "volume": 208.0
+      "volume": 208.0,
+      "change": 1.0,
+      "change_pct": 0.78,
+      "high": 128.5,
+      "low": 127.0,
+      "oi_change": -42.0,
+      "avg_volume_days": 4,
+      "avg_volume": 268.8
     },
     {
       "code": "CFF",
@@ -109,7 +151,14 @@
       "close_price": 58.0,
       "init_margin_amount": 18792,
       "open_interest": 3952.0,
-      "volume": 1684.0
+      "volume": 1684.0,
+      "change": 1.7,
+      "change_pct": 3.01,
+      "high": 60.1,
+      "low": 57.4,
+      "oi_change": -75.0,
+      "avg_volume_days": 4,
+      "avg_volume": 870.8
     },
     {
       "code": "CGF",
@@ -124,7 +173,14 @@
       "close_price": 39.45,
       "init_margin_amount": 12782,
       "open_interest": 9573.0,
-      "volume": 9793.0
+      "volume": 9793.0,
+      "change": -0.55,
+      "change_pct": -1.38,
+      "high": 42.05,
+      "low": 39.15,
+      "oi_change": 1627.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5345.8
     },
     {
       "code": "CHF",
@@ -139,7 +195,14 @@
       "close_price": 25.8,
       "init_margin_amount": 10449,
       "open_interest": 32823.0,
-      "volume": 8722.0
+      "volume": 8722.0,
+      "change": -0.35,
+      "change_pct": -1.34,
+      "high": 26.75,
+      "low": 25.6,
+      "oi_change": -719.0,
+      "avg_volume_days": 4,
+      "avg_volume": 12980.0
     },
     {
       "code": "CJF",
@@ -154,7 +217,14 @@
       "close_price": 39.0,
       "init_margin_amount": 10530,
       "open_interest": 199.0,
-      "volume": 929.0
+      "volume": 929.0,
+      "change": -2.45,
+      "change_pct": -5.91,
+      "high": 42.7,
+      "low": 38.45,
+      "oi_change": -845.0,
+      "avg_volume_days": 4,
+      "avg_volume": 817.5
     },
     {
       "code": "CKF",
@@ -169,7 +239,14 @@
       "close_price": 99.7,
       "init_margin_amount": 26919,
       "open_interest": 2419.0,
-      "volume": 1437.0
+      "volume": 1437.0,
+      "change": 0.1,
+      "change_pct": 0.1,
+      "high": 100.5,
+      "low": 99.0,
+      "oi_change": -324.0,
+      "avg_volume_days": 4,
+      "avg_volume": 946.5
     },
     {
       "code": "CLF",
@@ -184,7 +261,14 @@
       "close_price": 46.0,
       "init_margin_amount": 12420,
       "open_interest": 1292.0,
-      "volume": 1095.0
+      "volume": 1095.0,
+      "change": -0.7,
+      "change_pct": -1.5,
+      "high": 47.0,
+      "low": 45.2,
+      "oi_change": -80.0,
+      "avg_volume_days": 4,
+      "avg_volume": 567.2
     },
     {
       "code": "CMF",
@@ -199,7 +283,14 @@
       "close_price": 36.2,
       "init_margin_amount": 9774,
       "open_interest": 815.0,
-      "volume": 324.0
+      "volume": 324.0,
+      "change": 0.4,
+      "change_pct": 1.12,
+      "high": 36.25,
+      "low": 35.25,
+      "oi_change": -17.0,
+      "avg_volume_days": 4,
+      "avg_volume": 214.5
     },
     {
       "code": "CNF",
@@ -214,7 +305,14 @@
       "close_price": 66.4,
       "init_margin_amount": 17928,
       "open_interest": 2480.0,
-      "volume": 1018.0
+      "volume": 1018.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 66.6,
+      "low": 65.5,
+      "oi_change": -196.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1073.5
     },
     {
       "code": "CQF",
@@ -229,7 +327,14 @@
       "close_price": 76.4,
       "init_margin_amount": 20628,
       "open_interest": 1036.0,
-      "volume": 98.0
+      "volume": 98.0,
+      "change": 0.2,
+      "change_pct": 0.26,
+      "high": 76.7,
+      "low": 75.2,
+      "oi_change": -55.0,
+      "avg_volume_days": 4,
+      "avg_volume": 115.2
     },
     {
       "code": "CRF",
@@ -244,7 +349,14 @@
       "close_price": 26.9,
       "init_margin_amount": 7264,
       "open_interest": 663.0,
-      "volume": 228.0
+      "volume": 228.0,
+      "change": -0.7,
+      "change_pct": -2.54,
+      "high": 27.6,
+      "low": 26.8,
+      "oi_change": -66.0,
+      "avg_volume_days": 4,
+      "avg_volume": 232.5
     },
     {
       "code": "CSF",
@@ -259,7 +371,14 @@
       "close_price": 39.7,
       "init_margin_amount": 16079,
       "open_interest": 2924.0,
-      "volume": 1721.0
+      "volume": 1721.0,
+      "change": -0.55,
+      "change_pct": -1.37,
+      "high": 41.1,
+      "low": 39.35,
+      "oi_change": -151.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2247.0
     },
     {
       "code": "CUF",
@@ -274,7 +393,14 @@
       "close_price": 10.3,
       "init_margin_amount": 3338,
       "open_interest": 142.0,
-      "volume": 10.0
+      "volume": 10.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 10.4,
+      "low": 10.3,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 8.0
     },
     {
       "code": "CWF",
@@ -289,7 +415,14 @@
       "close_price": 28.75,
       "init_margin_amount": 7763,
       "open_interest": 426.0,
-      "volume": 75.0
+      "volume": 75.0,
+      "change": -0.3,
+      "change_pct": -1.03,
+      "high": 29.15,
+      "low": 28.75,
+      "oi_change": -38.0,
+      "avg_volume_days": 4,
+      "avg_volume": 103.8
     },
     {
       "code": "CXF",
@@ -304,7 +437,14 @@
       "close_price": 26.25,
       "init_margin_amount": 8505,
       "open_interest": 903.0,
-      "volume": 199.0
+      "volume": 199.0,
+      "change": 0.1,
+      "change_pct": 0.38,
+      "high": 26.6,
+      "low": 26.2,
+      "oi_change": -60.0,
+      "avg_volume_days": 4,
+      "avg_volume": 335.8
     },
     {
       "code": "CYF",
@@ -319,7 +459,14 @@
       "close_price": 514.0,
       "init_margin_amount": 235926,
       "open_interest": 11050.0,
-      "volume": 14892.0
+      "volume": 14892.0,
+      "change": 29.5,
+      "change_pct": 6.08,
+      "high": 532.0,
+      "low": 489.5,
+      "oi_change": 93.0,
+      "avg_volume_days": 4,
+      "avg_volume": 11053.5
     },
     {
       "code": "CZF",
@@ -334,7 +481,14 @@
       "close_price": 216.0,
       "init_margin_amount": 69984,
       "open_interest": 3823.0,
-      "volume": 1303.0
+      "volume": 1303.0,
+      "change": 1.0,
+      "change_pct": 0.47,
+      "high": 217.0,
+      "low": 215.0,
+      "oi_change": -472.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1495.8
     },
     {
       "code": "DAF",
@@ -349,7 +503,14 @@
       "close_price": 51.6,
       "init_margin_amount": 16719,
       "open_interest": 4434.0,
-      "volume": 770.0
+      "volume": 770.0,
+      "change": -0.2,
+      "change_pct": -0.39,
+      "high": 52.4,
+      "low": 50.9,
+      "oi_change": -230.0,
+      "avg_volume_days": 4,
+      "avg_volume": 866.8
     },
     {
       "code": "DBF",
@@ -364,7 +525,14 @@
       "close_price": 20.15,
       "init_margin_amount": 5441,
       "open_interest": 2233.0,
-      "volume": 405.0
+      "volume": 405.0,
+      "change": -0.2,
+      "change_pct": -0.98,
+      "high": 20.45,
+      "low": 20.0,
+      "oi_change": -105.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1286.5
     },
     {
       "code": "DCF",
@@ -379,7 +547,14 @@
       "close_price": 23.6,
       "init_margin_amount": 6372,
       "open_interest": 103.0,
-      "volume": 17.0
+      "volume": 17.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 24.5,
+      "low": 23.3,
+      "oi_change": -8.0,
+      "avg_volume_days": 4,
+      "avg_volume": 14.0
     },
     {
       "code": "DEF",
@@ -394,7 +569,14 @@
       "close_price": 39.95,
       "init_margin_amount": 10787,
       "open_interest": 597.0,
-      "volume": 91.0
+      "volume": 91.0,
+      "change": 0.15,
+      "change_pct": 0.38,
+      "high": 39.95,
+      "low": 39.45,
+      "oi_change": -12.0,
+      "avg_volume_days": 4,
+      "avg_volume": 102.2
     },
     {
       "code": "DFF",
@@ -409,7 +591,14 @@
       "close_price": 24.2,
       "init_margin_amount": 6534,
       "open_interest": 1873.0,
-      "volume": 533.0
+      "volume": 533.0,
+      "change": -0.4,
+      "change_pct": -1.63,
+      "high": 24.85,
+      "low": 24.05,
+      "oi_change": -173.0,
+      "avg_volume_days": 4,
+      "avg_volume": 440.5
     },
     {
       "code": "DGF",
@@ -424,7 +613,14 @@
       "close_price": 60.0,
       "init_margin_amount": 19440,
       "open_interest": 5147.0,
-      "volume": 1229.0
+      "volume": 1229.0,
+      "change": 0.1,
+      "change_pct": 0.17,
+      "high": 61.2,
+      "low": 59.1,
+      "oi_change": -65.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1424.2
     },
     {
       "code": "DHF",
@@ -439,7 +635,14 @@
       "close_price": 262.5,
       "init_margin_amount": 85050,
       "open_interest": 12722.0,
-      "volume": 11887.0
+      "volume": 11887.0,
+      "change": -9.0,
+      "change_pct": -3.31,
+      "high": 274.0,
+      "low": 261.0,
+      "oi_change": -2170.0,
+      "avg_volume_days": 4,
+      "avg_volume": 7806.5
     },
     {
       "code": "DIF",
@@ -454,7 +657,14 @@
       "close_price": 137.5,
       "init_margin_amount": 59401,
       "open_interest": 5778.0,
-      "volume": 6961.0
+      "volume": 6961.0,
+      "change": 0.5,
+      "change_pct": 0.36,
+      "high": 142.0,
+      "low": 136.5,
+      "oi_change": -879.0,
+      "avg_volume_days": 4,
+      "avg_volume": 9591.2
     },
     {
       "code": "DJF",
@@ -469,7 +679,14 @@
       "close_price": 930.0,
       "init_margin_amount": 301320,
       "open_interest": 727.0,
-      "volume": 101.0
+      "volume": 101.0,
+      "change": 84.0,
+      "change_pct": 9.93,
+      "high": 930.0,
+      "low": 930.0,
+      "oi_change": 1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 165.0
     },
     {
       "code": "QRF",
@@ -484,7 +701,14 @@
       "close_price": 930.0,
       "init_margin_amount": 15066,
       "open_interest": 3624.0,
-      "volume": 527.0
+      "volume": 527.0,
+      "change": 84.0,
+      "change_pct": 9.93,
+      "high": 930.0,
+      "low": 930.0,
+      "oi_change": 101.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1357.5
     },
     {
       "code": "DKF",
@@ -499,7 +723,14 @@
       "close_price": 326.0,
       "init_margin_amount": 132030,
       "open_interest": 6395.0,
-      "volume": 2632.0
+      "volume": 2632.0,
+      "change": 2.0,
+      "change_pct": 0.62,
+      "high": 329.0,
+      "low": 321.0,
+      "oi_change": -774.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2555.0
     },
     {
       "code": "DLF",
@@ -514,7 +745,14 @@
       "close_price": 136.0,
       "init_margin_amount": 36720,
       "open_interest": 621.0,
-      "volume": 171.0
+      "volume": 171.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 136.0,
+      "low": 135.0,
+      "oi_change": 6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 149.2
     },
     {
       "code": "DNF",
@@ -529,7 +767,14 @@
       "close_price": 37.3,
       "init_margin_amount": 10071,
       "open_interest": 1322.0,
-      "volume": 309.0
+      "volume": 309.0,
+      "change": 0.6,
+      "change_pct": 1.63,
+      "high": 37.5,
+      "low": 36.55,
+      "oi_change": -156.0,
+      "avg_volume_days": 4,
+      "avg_volume": 161.8
     },
     {
       "code": "DOF",
@@ -544,7 +789,14 @@
       "close_price": 69.8,
       "init_margin_amount": 18846,
       "open_interest": 663.0,
-      "volume": 202.0
+      "volume": 202.0,
+      "change": 1.7,
+      "change_pct": 2.5,
+      "high": 69.9,
+      "low": 68.2,
+      "oi_change": -101.0,
+      "avg_volume_days": 4,
+      "avg_volume": 90.0
     },
     {
       "code": "DPF",
@@ -559,7 +811,14 @@
       "close_price": 33.2,
       "init_margin_amount": 8964,
       "open_interest": 1136.0,
-      "volume": 238.0
+      "volume": 238.0,
+      "change": 0.05,
+      "change_pct": 0.15,
+      "high": 33.2,
+      "low": 32.85,
+      "oi_change": -52.0,
+      "avg_volume_days": 4,
+      "avg_volume": 464.0
     },
     {
       "code": "DQF",
@@ -574,7 +833,14 @@
       "close_price": 49.95,
       "init_margin_amount": 20230,
       "open_interest": 21721.0,
-      "volume": 17334.0
+      "volume": 17334.0,
+      "change": -0.55,
+      "change_pct": -1.09,
+      "high": 51.8,
+      "low": 49.2,
+      "oi_change": -22.0,
+      "avg_volume_days": 4,
+      "avg_volume": 21045.0
     },
     {
       "code": "DSF",
@@ -589,7 +855,14 @@
       "close_price": 31.65,
       "init_margin_amount": 10255,
       "open_interest": 5350.0,
-      "volume": 1780.0
+      "volume": 1780.0,
+      "change": -0.2,
+      "change_pct": -0.63,
+      "high": 32.6,
+      "low": 31.65,
+      "oi_change": -452.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1586.5
     },
     {
       "code": "DVF",
@@ -604,7 +877,14 @@
       "close_price": 4205.0,
       "init_margin_amount": 1703025,
       "open_interest": 2778.0,
-      "volume": 1794.0
+      "volume": 1794.0,
+      "change": 185.0,
+      "change_pct": 4.61,
+      "high": 4300.0,
+      "low": 4055.0,
+      "oi_change": -321.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1569.2
     },
     {
       "code": "PUF",
@@ -619,7 +899,14 @@
       "close_price": 4205.0,
       "init_margin_amount": 85152,
       "open_interest": 14134.0,
-      "volume": 8819.0
+      "volume": 8819.0,
+      "change": 190.0,
+      "change_pct": 4.73,
+      "high": 4295.0,
+      "low": 4050.0,
+      "oi_change": -397.0,
+      "avg_volume_days": 4,
+      "avg_volume": 6258.5
     },
     {
       "code": "DWF",
@@ -634,7 +921,14 @@
       "close_price": 54.5,
       "init_margin_amount": 14716,
       "open_interest": 245.0,
-      "volume": 105.0
+      "volume": 105.0,
+      "change": -0.3,
+      "change_pct": -0.55,
+      "high": 54.7,
+      "low": 53.7,
+      "oi_change": 7.0,
+      "avg_volume_days": 4,
+      "avg_volume": 74.2
     },
     {
       "code": "DXF",
@@ -649,7 +943,14 @@
       "close_price": 198.0,
       "init_margin_amount": 64152,
       "open_interest": 5998.0,
-      "volume": 6841.0
+      "volume": 6841.0,
+      "change": 4.0,
+      "change_pct": 2.06,
+      "high": 200.5,
+      "low": 193.5,
+      "oi_change": -777.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5700.5
     },
     {
       "code": "DYF",
@@ -664,7 +965,14 @@
       "close_price": 31.75,
       "init_margin_amount": 8573,
       "open_interest": 480.0,
-      "volume": 164.0
+      "volume": 164.0,
+      "change": -0.65,
+      "change_pct": -2.01,
+      "high": 32.3,
+      "low": 31.7,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 94.0
     },
     {
       "code": "DZF",
@@ -679,7 +987,14 @@
       "close_price": 52.5,
       "init_margin_amount": 14176,
       "open_interest": 85.0,
-      "volume": 36.0
+      "volume": 36.0,
+      "change": -0.3,
+      "change_pct": -0.57,
+      "high": 52.7,
+      "low": 52.2,
+      "oi_change": 10.0,
+      "avg_volume_days": 4,
+      "avg_volume": 39.5
     },
     {
       "code": "EEF",
@@ -694,7 +1009,14 @@
       "close_price": 11.7,
       "init_margin_amount": 3791,
       "open_interest": 942.0,
-      "volume": 58.0
+      "volume": 58.0,
+      "change": -0.1,
+      "change_pct": -0.85,
+      "high": 11.95,
+      "low": 11.65,
+      "oi_change": -26.0,
+      "avg_volume_days": 4,
+      "avg_volume": 179.8
     },
     {
       "code": "EGF",
@@ -709,7 +1031,14 @@
       "close_price": 7.7,
       "init_margin_amount": 2079,
       "open_interest": 960.0,
-      "volume": 287.0
+      "volume": 287.0,
+      "change": -0.06,
+      "change_pct": -0.77,
+      "high": 7.81,
+      "low": 7.67,
+      "oi_change": -116.0,
+      "avg_volume_days": 4,
+      "avg_volume": 265.0
     },
     {
       "code": "EHF",
@@ -724,7 +1053,14 @@
       "close_price": 78.8,
       "init_margin_amount": 21276,
       "open_interest": 311.0,
-      "volume": 73.0
+      "volume": 73.0,
+      "change": -0.2,
+      "change_pct": -0.25,
+      "high": 79.2,
+      "low": 77.9,
+      "oi_change": -32.0,
+      "avg_volume_days": 4,
+      "avg_volume": 96.2
     },
     {
       "code": "EKF",
@@ -739,7 +1075,14 @@
       "close_price": 13.6,
       "init_margin_amount": 3673,
       "open_interest": 248.0,
-      "volume": 14.0
+      "volume": 14.0,
+      "change": -0.15,
+      "change_pct": -1.09,
+      "high": 13.75,
+      "low": 13.6,
+      "oi_change": -12.0,
+      "avg_volume_days": 4,
+      "avg_volume": 84.8
     },
     {
       "code": "EMF",
@@ -754,7 +1097,14 @@
       "close_price": 70.6,
       "init_margin_amount": 28594,
       "open_interest": 854.0,
-      "volume": 779.0
+      "volume": 779.0,
+      "change": 3.0,
+      "change_pct": 4.44,
+      "high": 71.5,
+      "low": 68.2,
+      "oi_change": -169.0,
+      "avg_volume_days": 4,
+      "avg_volume": 381.5
     },
     {
       "code": "EOF",
@@ -769,7 +1119,14 @@
       "close_price": 707.0,
       "init_margin_amount": 286335,
       "open_interest": 28.0,
-      "volume": 13.0
+      "volume": 13.0,
+      "change": -22.0,
+      "change_pct": -3.02,
+      "high": 730.0,
+      "low": 707.0,
+      "oi_change": -3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 30.2
     },
     {
       "code": "EPF",
@@ -784,7 +1141,14 @@
       "close_price": 1474.0,
       "init_margin_amount": 477576,
       "open_interest": 23.0,
-      "volume": 22.0
+      "volume": 22.0,
+      "change": -118.0,
+      "change_pct": -7.41,
+      "high": 1601.0,
+      "low": 1474.0,
+      "oi_change": 1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 30.2
     },
     {
       "code": "EYF",
@@ -799,7 +1163,14 @@
       "close_price": 11.2,
       "init_margin_amount": 4536,
       "open_interest": 1310.0,
-      "volume": 957.0
+      "volume": 957.0,
+      "change": -0.15,
+      "change_pct": -1.33,
+      "high": 12.0,
+      "low": 10.85,
+      "oi_change": 24.0,
+      "avg_volume_days": 4,
+      "avg_volume": 701.0
     },
     {
       "code": "EZF",
@@ -814,7 +1185,14 @@
       "close_price": 46.5,
       "init_margin_amount": 12555,
       "open_interest": 106.0,
-      "volume": 18.0
+      "volume": 18.0,
+      "change": 0.1,
+      "change_pct": 0.22,
+      "high": 46.5,
+      "low": 46.5,
+      "oi_change": -12.0,
+      "avg_volume_days": 4,
+      "avg_volume": 10.5
     },
     {
       "code": "FBF",
@@ -829,7 +1207,14 @@
       "close_price": 85.5,
       "init_margin_amount": 23085,
       "open_interest": 51.0,
-      "volume": 13.0
+      "volume": 13.0,
+      "change": 1.5,
+      "change_pct": 1.79,
+      "high": 85.5,
+      "low": 83.7,
+      "oi_change": -2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 20.5
     },
     {
       "code": "FEF",
@@ -844,7 +1229,14 @@
       "close_price": 50.7,
       "init_margin_amount": 13689,
       "open_interest": 2816.0,
-      "volume": 1486.0
+      "volume": 1486.0,
+      "change": 3.6,
+      "change_pct": 7.66,
+      "high": 51.7,
+      "low": 48.2,
+      "oi_change": -98.0,
+      "avg_volume_days": 4,
+      "avg_volume": 790.5
     },
     {
       "code": "FFF",
@@ -859,7 +1251,14 @@
       "close_price": 383.0,
       "init_margin_amount": 155115,
       "open_interest": 749.0,
-      "volume": 1069.0
+      "volume": 1069.0,
+      "change": 12.5,
+      "change_pct": 3.37,
+      "high": 405.5,
+      "low": 380.0,
+      "oi_change": 79.0,
+      "avg_volume_days": 4,
+      "avg_volume": 755.8
     },
     {
       "code": "QMF",
@@ -874,7 +1273,14 @@
       "close_price": 383.0,
       "init_margin_amount": 7756,
       "open_interest": 2679.0,
-      "volume": 3395.0
+      "volume": 3395.0,
+      "change": 14.0,
+      "change_pct": 3.78,
+      "high": 407.5,
+      "low": 379.0,
+      "oi_change": 112.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2294.8
     },
     {
       "code": "FGF",
@@ -889,7 +1295,14 @@
       "close_price": 12210.0,
       "init_margin_amount": 7418796,
       "open_interest": 65.0,
-      "volume": 306.0
+      "volume": 306.0,
+      "change": -30.0,
+      "change_pct": -0.25,
+      "high": 12560.0,
+      "low": 11930.0,
+      "oi_change": -20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 277.0
     },
     {
       "code": "SVF",
@@ -904,7 +1317,14 @@
       "close_price": 12210.0,
       "init_margin_amount": 370940,
       "open_interest": 739.0,
-      "volume": 491.0
+      "volume": 491.0,
+      "change": 220.0,
+      "change_pct": 1.84,
+      "high": 12510.0,
+      "low": 11930.0,
+      "oi_change": -37.0,
+      "avg_volume_days": 4,
+      "avg_volume": 879.0
     },
     {
       "code": "FKF",
@@ -919,7 +1339,14 @@
       "close_price": 30.6,
       "init_margin_amount": 8262,
       "open_interest": 496.0,
-      "volume": 180.0
+      "volume": 180.0,
+      "change": -1.6,
+      "change_pct": -4.97,
+      "high": 31.5,
+      "low": 30.55,
+      "oi_change": -100.0,
+      "avg_volume_days": 4,
+      "avg_volume": 116.5
     },
     {
       "code": "FNF",
@@ -934,7 +1361,14 @@
       "close_price": 28.85,
       "init_margin_amount": 9348,
       "open_interest": 549.0,
-      "volume": 139.0
+      "volume": 139.0,
+      "change": 0.25,
+      "change_pct": 0.87,
+      "high": 29.25,
+      "low": 28.65,
+      "oi_change": 1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 87.8
     },
     {
       "code": "FQF",
@@ -949,7 +1383,14 @@
       "close_price": 271.0,
       "init_margin_amount": 87804,
       "open_interest": 4594.0,
-      "volume": 4347.0
+      "volume": 4347.0,
+      "change": 10.5,
+      "change_pct": 4.03,
+      "high": 282.0,
+      "low": 264.0,
+      "oi_change": 52.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3724.5
     },
     {
       "code": "FRF",
@@ -964,7 +1405,14 @@
       "close_price": 1883.0,
       "init_margin_amount": 610092,
       "open_interest": 2167.0,
-      "volume": 1743.0
+      "volume": 1743.0,
+      "change": 87.0,
+      "change_pct": 4.84,
+      "high": 1918.0,
+      "low": 1813.0,
+      "oi_change": -388.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1446.2
     },
     {
       "code": "RVF",
@@ -979,7 +1427,14 @@
       "close_price": 1883.0,
       "init_margin_amount": 30505,
       "open_interest": 11104.0,
-      "volume": 8851.0
+      "volume": 8851.0,
+      "change": 97.0,
+      "change_pct": 5.4,
+      "high": 1916.0,
+      "low": 1817.0,
+      "oi_change": -487.0,
+      "avg_volume_days": 4,
+      "avg_volume": 8038.5
     },
     {
       "code": "FSF",
@@ -994,7 +1449,14 @@
       "close_price": 33.45,
       "init_margin_amount": 13548,
       "open_interest": 1230.0,
-      "volume": 632.0
+      "volume": 632.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 34.45,
+      "low": 33.15,
+      "oi_change": -53.0,
+      "avg_volume_days": 4,
+      "avg_volume": 482.0
     },
     {
       "code": "FTF",
@@ -1009,7 +1471,14 @@
       "close_price": 211.5,
       "init_margin_amount": 85658,
       "open_interest": 2926.0,
-      "volume": 2185.0
+      "volume": 2185.0,
+      "change": 2.0,
+      "change_pct": 0.95,
+      "high": 225.0,
+      "low": 211.0,
+      "oi_change": -168.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2042.8
     },
     {
       "code": "FVF",
@@ -1024,7 +1493,14 @@
       "close_price": 18.85,
       "init_margin_amount": 7635,
       "open_interest": 187.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 52.5
     },
     {
       "code": "FWF",
@@ -1039,7 +1515,14 @@
       "close_price": 22.75,
       "init_margin_amount": 7371,
       "open_interest": 1891.0,
-      "volume": 1249.0
+      "volume": 1249.0,
+      "change": 0.4,
+      "change_pct": 1.79,
+      "high": 23.55,
+      "low": 22.2,
+      "oi_change": -159.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1230.0
     },
     {
       "code": "FYF",
@@ -1054,7 +1537,14 @@
       "close_price": 31.45,
       "init_margin_amount": 12738,
       "open_interest": 570.0,
-      "volume": 80.0
+      "volume": 80.0,
+      "change": -0.3,
+      "change_pct": -0.94,
+      "high": 32.65,
+      "low": 31.0,
+      "oi_change": -36.0,
+      "avg_volume_days": 4,
+      "avg_volume": 138.0
     },
     {
       "code": "FZF",
@@ -1069,7 +1559,14 @@
       "close_price": 177.5,
       "init_margin_amount": 76681,
       "open_interest": 15650.0,
-      "volume": 25244.0
+      "volume": 25244.0,
+      "change": -0.5,
+      "change_pct": -0.28,
+      "high": 185.0,
+      "low": 176.5,
+      "oi_change": -2876.0,
+      "avg_volume_days": 4,
+      "avg_volume": 22089.2
     },
     {
       "code": "GAF",
@@ -1084,7 +1581,14 @@
       "close_price": 91.2,
       "init_margin_amount": 24624,
       "open_interest": 280.0,
-      "volume": 27.0
+      "volume": 27.0,
+      "change": -1.2,
+      "change_pct": -1.3,
+      "high": 92.1,
+      "low": 91.2,
+      "oi_change": -10.0,
+      "avg_volume_days": 4,
+      "avg_volume": 21.0
     },
     {
       "code": "GCF",
@@ -1099,7 +1603,14 @@
       "close_price": 63.1,
       "init_margin_amount": 20445,
       "open_interest": 1109.0,
-      "volume": 1162.0
+      "volume": 1162.0,
+      "change": -0.2,
+      "change_pct": -0.32,
+      "high": 64.2,
+      "low": 61.9,
+      "oi_change": -121.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1341.0
     },
     {
       "code": "GHF",
@@ -1114,7 +1625,14 @@
       "close_price": 394.0,
       "init_margin_amount": 159570,
       "open_interest": 1926.0,
-      "volume": 1810.0
+      "volume": 1810.0,
+      "change": 18.0,
+      "change_pct": 4.79,
+      "high": 395.5,
+      "low": 377.5,
+      "oi_change": -25.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1096.2
     },
     {
       "code": "SLF",
@@ -1129,7 +1647,14 @@
       "close_price": 394.0,
       "init_margin_amount": 7979,
       "open_interest": 3121.0,
-      "volume": 3167.0
+      "volume": 3167.0,
+      "change": 19.0,
+      "change_pct": 5.05,
+      "high": 396.5,
+      "low": 377.5,
+      "oi_change": -85.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1995.5
     },
     {
       "code": "GIF",
@@ -1144,7 +1669,14 @@
       "close_price": 169.0,
       "init_margin_amount": 45630,
       "open_interest": 2133.0,
-      "volume": 3422.0
+      "volume": 3422.0,
+      "change": 0.5,
+      "change_pct": 0.3,
+      "high": 177.0,
+      "low": 163.0,
+      "oi_change": -190.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1724.5
     },
     {
       "code": "GJF",
@@ -1159,7 +1691,14 @@
       "close_price": 757.0,
       "init_margin_amount": 245268,
       "open_interest": 568.0,
-      "volume": 51.0
+      "volume": 51.0,
+      "change": -6.0,
+      "change_pct": -0.78,
+      "high": 770.0,
+      "low": 754.0,
+      "oi_change": -25.0,
+      "avg_volume_days": 4,
+      "avg_volume": 77.5
     },
     {
       "code": "QGF",
@@ -1174,7 +1713,14 @@
       "close_price": 757.0,
       "init_margin_amount": 12264,
       "open_interest": 7216.0,
-      "volume": 841.0
+      "volume": 841.0,
+      "change": -8.0,
+      "change_pct": -1.05,
+      "high": 770.0,
+      "low": 752.0,
+      "oi_change": 171.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1598.2
     },
     {
       "code": "GKF",
@@ -1189,7 +1735,14 @@
       "close_price": 106.0,
       "init_margin_amount": 28621,
       "open_interest": 141.0,
-      "volume": 52.0
+      "volume": 52.0,
+      "change": 1.5,
+      "change_pct": 1.44,
+      "high": 107.5,
+      "low": 104.0,
+      "oi_change": -26.0,
+      "avg_volume_days": 4,
+      "avg_volume": 31.8
     },
     {
       "code": "GLF",
@@ -1204,7 +1757,14 @@
       "close_price": 39.35,
       "init_margin_amount": 12750,
       "open_interest": 234.0,
-      "volume": 26.0
+      "volume": 26.0,
+      "change": -0.8,
+      "change_pct": -1.99,
+      "high": 39.7,
+      "low": 38.9,
+      "oi_change": -3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 27.0
     },
     {
       "code": "GMF",
@@ -1219,7 +1779,14 @@
       "close_price": 65.2,
       "init_margin_amount": 17604,
       "open_interest": 201.0,
-      "volume": 91.0
+      "volume": 91.0,
+      "change": 2.0,
+      "change_pct": 3.16,
+      "high": 65.6,
+      "low": 63.9,
+      "oi_change": -23.0,
+      "avg_volume_days": 4,
+      "avg_volume": 100.5
     },
     {
       "code": "GNF",
@@ -1234,7 +1801,14 @@
       "close_price": 27.4,
       "init_margin_amount": 8878,
       "open_interest": 372.0,
-      "volume": 85.0
+      "volume": 85.0,
+      "change": -0.65,
+      "change_pct": -2.32,
+      "high": 28.65,
+      "low": 27.1,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 146.0
     },
     {
       "code": "GOF",
@@ -1249,7 +1823,14 @@
       "close_price": 1132.0,
       "init_margin_amount": 366768,
       "open_interest": 203.0,
-      "volume": 80.0
+      "volume": 80.0,
+      "change": -22.0,
+      "change_pct": -1.92,
+      "high": 1175.0,
+      "low": 1121.0,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 34.5
     },
     {
       "code": "UZF",
@@ -1264,7 +1845,14 @@
       "close_price": 1132.0,
       "init_margin_amount": 18339,
       "open_interest": 3235.0,
-      "volume": 827.0
+      "volume": 827.0,
+      "change": -15.0,
+      "change_pct": -1.31,
+      "high": 1175.0,
+      "low": 1119.0,
+      "oi_change": -102.0,
+      "avg_volume_days": 4,
+      "avg_volume": 444.2
     },
     {
       "code": "GRF",
@@ -1279,7 +1867,14 @@
       "close_price": 253.0,
       "init_margin_amount": 102465,
       "open_interest": 2281.0,
-      "volume": 2802.0
+      "volume": 2802.0,
+      "change": -8.5,
+      "change_pct": -3.26,
+      "high": 267.0,
+      "low": 251.5,
+      "oi_change": -24.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2421.0
     },
     {
       "code": "VOF",
@@ -1294,7 +1889,14 @@
       "close_price": 253.0,
       "init_margin_amount": 5124,
       "open_interest": 974.0,
-      "volume": 903.0
+      "volume": 903.0,
+      "change": -8.0,
+      "change_pct": -3.07,
+      "high": 267.0,
+      "low": 252.5,
+      "oi_change": -142.0,
+      "avg_volume_days": 4,
+      "avg_volume": 860.8
     },
     {
       "code": "GUF",
@@ -1309,7 +1911,14 @@
       "close_price": 384.0,
       "init_margin_amount": 233319,
       "open_interest": 1892.0,
-      "volume": 1739.0
+      "volume": 1739.0,
+      "change": -4.0,
+      "change_pct": -1.03,
+      "high": 404.5,
+      "low": 379.0,
+      "oi_change": -226.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1446.0
     },
     {
       "code": "GVF",
@@ -1324,7 +1933,14 @@
       "close_price": 23.95,
       "init_margin_amount": 9700,
       "open_interest": 194.0,
-      "volume": 2.0
+      "volume": 2.0,
+      "change": 0.3,
+      "change_pct": 1.27,
+      "high": 23.95,
+      "low": 23.65,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 25.5
     },
     {
       "code": "GWF",
@@ -1339,7 +1955,14 @@
       "close_price": 146.5,
       "init_margin_amount": 39555,
       "open_interest": 435.0,
-      "volume": 131.0
+      "volume": 131.0,
+      "change": 1.0,
+      "change_pct": 0.69,
+      "high": 146.5,
+      "low": 144.0,
+      "oi_change": -24.0,
+      "avg_volume_days": 4,
+      "avg_volume": 113.2
     },
     {
       "code": "GXF",
@@ -1354,7 +1977,14 @@
       "close_price": 203.0,
       "init_margin_amount": 54810,
       "open_interest": 1485.0,
-      "volume": 333.0
+      "volume": 333.0,
+      "change": -2.5,
+      "change_pct": -1.22,
+      "high": 206.5,
+      "low": 202.0,
+      "oi_change": -76.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1101.8
     },
     {
       "code": "GYF",
@@ -1369,7 +1999,14 @@
       "close_price": 144.5,
       "init_margin_amount": 58523,
       "open_interest": 2803.0,
-      "volume": 3400.0
+      "volume": 3400.0,
+      "change": 5.0,
+      "change_pct": 3.58,
+      "high": 151.5,
+      "low": 140.5,
+      "oi_change": 52.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2107.5
     },
     {
       "code": "GZF",
@@ -1384,7 +2021,14 @@
       "close_price": 43.8,
       "init_margin_amount": 17739,
       "open_interest": 476.0,
-      "volume": 140.0
+      "volume": 140.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 45.55,
+      "low": 43.5,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 173.8
     },
     {
       "code": "HAF",
@@ -1399,7 +2043,14 @@
       "close_price": 32.05,
       "init_margin_amount": 12981,
       "open_interest": 1053.0,
-      "volume": 221.0
+      "volume": 221.0,
+      "change": -0.85,
+      "change_pct": -2.58,
+      "high": 33.2,
+      "low": 32.05,
+      "oi_change": -89.0,
+      "avg_volume_days": 4,
+      "avg_volume": 462.8
     },
     {
       "code": "HBF",
@@ -1414,7 +2065,14 @@
       "close_price": 320.0,
       "init_margin_amount": 129601,
       "open_interest": 4913.0,
-      "volume": 5481.0
+      "volume": 5481.0,
+      "change": 29.0,
+      "change_pct": 9.97,
+      "high": 320.0,
+      "low": 293.0,
+      "oi_change": -491.0,
+      "avg_volume_days": 4,
+      "avg_volume": 7291.5
     },
     {
       "code": "HCF",
@@ -1429,7 +2087,14 @@
       "close_price": 40.1,
       "init_margin_amount": 16241,
       "open_interest": 1413.0,
-      "volume": 303.0
+      "volume": 303.0,
+      "change": -0.35,
+      "change_pct": -0.87,
+      "high": 40.65,
+      "low": 40.0,
+      "oi_change": -20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 201.8
     },
     {
       "code": "HHF",
@@ -1444,7 +2109,14 @@
       "close_price": 12.0,
       "init_margin_amount": 3888,
       "open_interest": 163.0,
-      "volume": 10.0
+      "volume": 10.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 12.05,
+      "low": 12.0,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 15.0
     },
     {
       "code": "HIF",
@@ -1459,7 +2131,14 @@
       "close_price": 35.45,
       "init_margin_amount": 11486,
       "open_interest": 134.0,
-      "volume": 27.0
+      "volume": 27.0,
+      "change": 0.1,
+      "change_pct": 0.28,
+      "high": 35.45,
+      "low": 35.1,
+      "oi_change": 17.0,
+      "avg_volume_days": 4,
+      "avg_volume": 40.2
     },
     {
       "code": "HLF",
@@ -1474,7 +2153,14 @@
       "close_price": 46.95,
       "init_margin_amount": 12677,
       "open_interest": 301.0,
-      "volume": 119.0
+      "volume": 119.0,
+      "change": 2.15,
+      "change_pct": 4.8,
+      "high": 46.95,
+      "low": 45.0,
+      "oi_change": 13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 62.8
     },
     {
       "code": "HOF",
@@ -1489,7 +2175,14 @@
       "close_price": 93.2,
       "init_margin_amount": 25164,
       "open_interest": 82.0,
-      "volume": 7.0
+      "volume": 7.0,
+      "change": -0.8,
+      "change_pct": -0.85,
+      "high": 93.5,
+      "low": 93.1,
+      "oi_change": 6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 10.5
     },
     {
       "code": "HQF",
@@ -1504,7 +2197,14 @@
       "close_price": 32.3,
       "init_margin_amount": 10466,
       "open_interest": 630.0,
-      "volume": 562.0
+      "volume": 562.0,
+      "change": -0.5,
+      "change_pct": -1.52,
+      "high": 33.3,
+      "low": 31.4,
+      "oi_change": -56.0,
+      "avg_volume_days": 4,
+      "avg_volume": 344.2
     },
     {
       "code": "HSF",
@@ -1519,7 +2219,14 @@
       "close_price": 41.0,
       "init_margin_amount": 11070,
       "open_interest": 4544.0,
-      "volume": 1663.0
+      "volume": 1663.0,
+      "change": -1.1,
+      "change_pct": -2.61,
+      "high": 42.25,
+      "low": 40.8,
+      "oi_change": -272.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2509.5
     },
     {
       "code": "IAF",
@@ -1534,7 +2241,14 @@
       "close_price": 16.45,
       "init_margin_amount": 4442,
       "open_interest": 174.0,
-      "volume": 8.0
+      "volume": 8.0,
+      "change": -0.1,
+      "change_pct": -0.6,
+      "high": 16.45,
+      "low": 16.3,
+      "oi_change": -2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5.5
     },
     {
       "code": "IHF",
@@ -1549,7 +2263,14 @@
       "close_price": 10.85,
       "init_margin_amount": 2930,
       "open_interest": 147.0,
-      "volume": 4.0
+      "volume": 4.0,
+      "change": -0.1,
+      "change_pct": -0.91,
+      "high": 10.95,
+      "low": 10.85,
+      "oi_change": -4.0,
+      "avg_volume_days": 4,
+      "avg_volume": 7.0
     },
     {
       "code": "IIF",
@@ -1564,7 +2285,14 @@
       "close_price": 279.0,
       "init_margin_amount": 180792,
       "open_interest": 1611.0,
-      "volume": 726.0
+      "volume": 726.0,
+      "change": 3.5,
+      "change_pct": 1.27,
+      "high": 282.0,
+      "low": 273.5,
+      "oi_change": -104.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1218.0
     },
     {
       "code": "IJF",
@@ -1579,7 +2307,14 @@
       "close_price": 4645.0,
       "init_margin_amount": 1504980,
       "open_interest": 322.0,
-      "volume": 88.0
+      "volume": 88.0,
+      "change": 75.0,
+      "change_pct": 1.64,
+      "high": 4810.0,
+      "low": 4535.0,
+      "oi_change": -30.0,
+      "avg_volume_days": 4,
+      "avg_volume": 104.2
     },
     {
       "code": "OLF",
@@ -1594,7 +2329,14 @@
       "close_price": 4645.0,
       "init_margin_amount": 75249,
       "open_interest": 6462.0,
-      "volume": 6124.0
+      "volume": 6124.0,
+      "change": 85.0,
+      "change_pct": 1.86,
+      "high": 4830.0,
+      "low": 4520.0,
+      "oi_change": -198.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4614.5
     },
     {
       "code": "IMF",
@@ -1609,7 +2351,14 @@
       "close_price": 139.5,
       "init_margin_amount": 56498,
       "open_interest": 1252.0,
-      "volume": 280.0
+      "volume": 280.0,
+      "change": 1.5,
+      "change_pct": 1.09,
+      "high": 140.5,
+      "low": 139.0,
+      "oi_change": -174.0,
+      "avg_volume_days": 4,
+      "avg_volume": 486.2
     },
     {
       "code": "IOF",
@@ -1624,7 +2373,14 @@
       "close_price": 535.0,
       "init_margin_amount": 144450,
       "open_interest": 923.0,
-      "volume": 165.0
+      "volume": 165.0,
+      "change": -4.0,
+      "change_pct": -0.74,
+      "high": 544.0,
+      "low": 531.0,
+      "oi_change": -59.0,
+      "avg_volume_days": 4,
+      "avg_volume": 247.2
     },
     {
       "code": "QHF",
@@ -1639,7 +2395,14 @@
       "close_price": 535.0,
       "init_margin_amount": 7223,
       "open_interest": 4069.0,
-      "volume": 880.0
+      "volume": 880.0,
+      "change": -4.0,
+      "change_pct": -0.74,
+      "high": 555.0,
+      "low": 530.0,
+      "oi_change": -90.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1072.0
     },
     {
       "code": "IPF",
@@ -1654,7 +2417,14 @@
       "close_price": 177.5,
       "init_margin_amount": 71888,
       "open_interest": 1308.0,
-      "volume": 249.0
+      "volume": 249.0,
+      "change": -2.0,
+      "change_pct": -1.11,
+      "high": 184.5,
+      "low": 177.0,
+      "oi_change": -66.0,
+      "avg_volume_days": 4,
+      "avg_volume": 313.0
     },
     {
       "code": "IQF",
@@ -1669,7 +2439,14 @@
       "close_price": 214.0,
       "init_margin_amount": 69336,
       "open_interest": 1708.0,
-      "volume": 496.0
+      "volume": 496.0,
+      "change": -4.5,
+      "change_pct": -2.06,
+      "high": 221.0,
+      "low": 214.0,
+      "oi_change": -121.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1130.5
     },
     {
       "code": "IRF",
@@ -1684,7 +2461,14 @@
       "close_price": 1003.0,
       "init_margin_amount": 609423,
       "open_interest": 3034.0,
-      "volume": 1840.0
+      "volume": 1840.0,
+      "change": 4.0,
+      "change_pct": 0.4,
+      "high": 1045.0,
+      "low": 970.0,
+      "oi_change": -209.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1697.2
     },
     {
       "code": "ITF",
@@ -1699,7 +2483,14 @@
       "close_price": 186.0,
       "init_margin_amount": 75330,
       "open_interest": 2462.0,
-      "volume": 2999.0
+      "volume": 2999.0,
+      "change": 4.5,
+      "change_pct": 2.48,
+      "high": 197.5,
+      "low": 181.5,
+      "oi_change": -233.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2988.5
     },
     {
       "code": "IXF",
@@ -1714,7 +2505,14 @@
       "close_price": 850.0,
       "init_margin_amount": 688500,
       "open_interest": 3295.0,
-      "volume": 2365.0
+      "volume": 2365.0,
+      "change": -9.0,
+      "change_pct": -1.05,
+      "high": 883.0,
+      "low": 813.0,
+      "oi_change": -495.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2074.2
     },
     {
       "code": "IYF",
@@ -1729,7 +2527,14 @@
       "close_price": 190.0,
       "init_margin_amount": 76950,
       "open_interest": 1883.0,
-      "volume": 311.0
+      "volume": 311.0,
+      "change": -3.0,
+      "change_pct": -1.55,
+      "high": 194.0,
+      "low": 189.0,
+      "oi_change": -163.0,
+      "avg_volume_days": 4,
+      "avg_volume": 401.8
     },
     {
       "code": "IZF",
@@ -1744,7 +2549,14 @@
       "close_price": 28.45,
       "init_margin_amount": 9218,
       "open_interest": 259.0,
-      "volume": 65.0
+      "volume": 65.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 28.75,
+      "low": 28.45,
+      "oi_change": -6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 55.2
     },
     {
       "code": "JBF",
@@ -1759,7 +2571,14 @@
       "close_price": 5500.0,
       "init_margin_amount": 2227500,
       "open_interest": 573.0,
-      "volume": 411.0
+      "volume": 411.0,
+      "change": 370.0,
+      "change_pct": 7.19,
+      "high": 5575.0,
+      "low": 5060.0,
+      "oi_change": -64.0,
+      "avg_volume_days": 4,
+      "avg_volume": 428.8
     },
     {
       "code": "RWF",
@@ -1774,7 +2593,14 @@
       "close_price": 5500.0,
       "init_margin_amount": 111376,
       "open_interest": 4722.0,
-      "volume": 4613.0
+      "volume": 4613.0,
+      "change": 355.0,
+      "change_pct": 6.9,
+      "high": 5580.0,
+      "low": 5220.0,
+      "oi_change": 93.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4527.5
     },
     {
       "code": "JFF",
@@ -1789,7 +2615,14 @@
       "close_price": 1814.0,
       "init_margin_amount": 734670,
       "open_interest": 62.0,
-      "volume": 50.0
+      "volume": 50.0,
+      "change": -197.0,
+      "change_pct": -9.79,
+      "high": 1985.0,
+      "low": 1812.0,
+      "oi_change": 13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 18.5
     },
     {
       "code": "RFF",
@@ -1804,7 +2637,14 @@
       "close_price": 1814.0,
       "init_margin_amount": 36734,
       "open_interest": 1372.0,
-      "volume": 1989.0
+      "volume": 1989.0,
+      "change": -199.0,
+      "change_pct": -9.89,
+      "high": 1995.0,
+      "low": 1812.0,
+      "oi_change": 214.0,
+      "avg_volume_days": 4,
+      "avg_volume": 828.0
     },
     {
       "code": "JMF",
@@ -1819,7 +2659,14 @@
       "close_price": 4680.0,
       "init_margin_amount": 3032640,
       "open_interest": 122.0,
-      "volume": 213.0
+      "volume": 213.0,
+      "change": 120.0,
+      "change_pct": 2.67,
+      "high": 4685.0,
+      "low": 4450.0,
+      "oi_change": -18.0,
+      "avg_volume_days": 4,
+      "avg_volume": 162.5
     },
     {
       "code": "RGF",
@@ -1834,7 +2681,14 @@
       "close_price": 4680.0,
       "init_margin_amount": 151632,
       "open_interest": 3289.0,
-      "volume": 2499.0
+      "volume": 2499.0,
+      "change": 185.0,
+      "change_pct": 4.12,
+      "high": 4700.0,
+      "low": 4425.0,
+      "oi_change": 155.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2150.5
     },
     {
       "code": "JNF",
@@ -1849,7 +2703,14 @@
       "close_price": 62.8,
       "init_margin_amount": 20348,
       "open_interest": 560.0,
-      "volume": 114.0
+      "volume": 114.0,
+      "change": -0.4,
+      "change_pct": -0.63,
+      "high": 64.5,
+      "low": 62.5,
+      "oi_change": -53.0,
+      "avg_volume_days": 4,
+      "avg_volume": 147.5
     },
     {
       "code": "JPF",
@@ -1864,7 +2725,14 @@
       "close_price": 123.5,
       "init_margin_amount": 33345,
       "open_interest": 1548.0,
-      "volume": 320.0
+      "volume": 320.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 125.0,
+      "low": 121.0,
+      "oi_change": -77.0,
+      "avg_volume_days": 4,
+      "avg_volume": 551.5
     },
     {
       "code": "JSF",
@@ -1879,7 +2747,14 @@
       "close_price": 95.2,
       "init_margin_amount": 25704,
       "open_interest": 1146.0,
-      "volume": 2372.0
+      "volume": 2372.0,
+      "change": 3.1,
+      "change_pct": 3.37,
+      "high": 101.0,
+      "low": 92.1,
+      "oi_change": 366.0,
+      "avg_volume_days": 4,
+      "avg_volume": 911.5
     },
     {
       "code": "JWF",
@@ -1894,7 +2769,14 @@
       "close_price": 78.1,
       "init_margin_amount": 25305,
       "open_interest": 48.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 0.5
     },
     {
       "code": "JXF",
@@ -1909,7 +2791,14 @@
       "close_price": 30.9,
       "init_margin_amount": 8343,
       "open_interest": 29.0,
-      "volume": 26.0
+      "volume": 26.0,
+      "change": 0.35,
+      "change_pct": 1.15,
+      "high": 31.2,
+      "low": 30.6,
+      "oi_change": 21.0,
+      "avg_volume_days": 4,
+      "avg_volume": 15.0
     },
     {
       "code": "JZF",
@@ -1924,7 +2813,14 @@
       "close_price": 17.3,
       "init_margin_amount": 7007,
       "open_interest": 673.0,
-      "volume": 431.0
+      "volume": 431.0,
+      "change": 0.05,
+      "change_pct": 0.29,
+      "high": 17.75,
+      "low": 17.0,
+      "oi_change": 32.0,
+      "avg_volume_days": 4,
+      "avg_volume": 218.2
     },
     {
       "code": "KAF",
@@ -1939,7 +2835,14 @@
       "close_price": null,
       "init_margin_amount": null,
       "open_interest": null,
-      "volume": null
+      "volume": null,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": null,
+      "avg_volume_days": 3,
+      "avg_volume": 117.0
     },
     {
       "code": "KBF",
@@ -1954,7 +2857,14 @@
       "close_price": 470.5,
       "init_margin_amount": 285876,
       "open_interest": 2653.0,
-      "volume": 1679.0
+      "volume": 1679.0,
+      "change": 3.0,
+      "change_pct": 0.64,
+      "high": 474.5,
+      "low": 448.0,
+      "oi_change": 4.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2278.0
     },
     {
       "code": "KCF",
@@ -1969,7 +2879,14 @@
       "close_price": 283.5,
       "init_margin_amount": 91854,
       "open_interest": 2298.0,
-      "volume": 1587.0
+      "volume": 1587.0,
+      "change": 0.5,
+      "change_pct": 0.18,
+      "high": 295.0,
+      "low": 282.0,
+      "oi_change": -332.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1859.0
     },
     {
       "code": "KDF",
@@ -1984,7 +2901,14 @@
       "close_price": 199.0,
       "init_margin_amount": 80595,
       "open_interest": 585.0,
-      "volume": 166.0
+      "volume": 166.0,
+      "change": 0.5,
+      "change_pct": 0.25,
+      "high": 205.0,
+      "low": 199.0,
+      "oi_change": -64.0,
+      "avg_volume_days": 4,
+      "avg_volume": 214.5
     },
     {
       "code": "KEF",
@@ -1999,7 +2923,14 @@
       "close_price": 168.5,
       "init_margin_amount": 45495,
       "open_interest": 520.0,
-      "volume": 188.0
+      "volume": 188.0,
+      "change": -3.5,
+      "change_pct": -2.03,
+      "high": 178.0,
+      "low": 168.0,
+      "oi_change": 33.0,
+      "avg_volume_days": 4,
+      "avg_volume": 209.8
     },
     {
       "code": "KFF",
@@ -2014,7 +2945,14 @@
       "close_price": 48.1,
       "init_margin_amount": 19481,
       "open_interest": 2226.0,
-      "volume": 752.0
+      "volume": 752.0,
+      "change": 1.3,
+      "change_pct": 2.77,
+      "high": 49.0,
+      "low": 46.85,
+      "oi_change": -233.0,
+      "avg_volume_days": 4,
+      "avg_volume": 853.0
     },
     {
       "code": "KGF",
@@ -2029,7 +2967,14 @@
       "close_price": 248.0,
       "init_margin_amount": 100440,
       "open_interest": 494.0,
-      "volume": 158.0
+      "volume": 158.0,
+      "change": -4.5,
+      "change_pct": -1.78,
+      "high": 256.5,
+      "low": 247.5,
+      "oi_change": 9.0,
+      "avg_volume_days": 4,
+      "avg_volume": 240.5
     },
     {
       "code": "KIF",
@@ -2044,7 +2989,14 @@
       "close_price": 251.0,
       "init_margin_amount": 101655,
       "open_interest": 2776.0,
-      "volume": 1696.0
+      "volume": 1696.0,
+      "change": 22.5,
+      "change_pct": 9.85,
+      "high": 251.0,
+      "low": 228.5,
+      "oi_change": 106.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2445.0
     },
     {
       "code": "KKF",
@@ -2059,7 +3011,14 @@
       "close_price": 32.0,
       "init_margin_amount": 8640,
       "open_interest": 54.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": 0.1,
+      "change_pct": 0.31,
+      "high": 32.0,
+      "low": 32.0,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1.0
     },
     {
       "code": "KLF",
@@ -2074,7 +3033,14 @@
       "close_price": 23.95,
       "init_margin_amount": 6467,
       "open_interest": 561.0,
-      "volume": 114.0
+      "volume": 114.0,
+      "change": -0.1,
+      "change_pct": -0.42,
+      "high": 24.0,
+      "low": 23.8,
+      "oi_change": -38.0,
+      "avg_volume_days": 4,
+      "avg_volume": 96.8
     },
     {
       "code": "KOF",
@@ -2089,7 +3055,14 @@
       "close_price": 135.5,
       "init_margin_amount": 36585,
       "open_interest": 86.0,
-      "volume": 32.0
+      "volume": 32.0,
+      "change": 1.5,
+      "change_pct": 1.12,
+      "high": 140.0,
+      "low": 135.5,
+      "oi_change": 18.0,
+      "avg_volume_days": 4,
+      "avg_volume": 22.2
     },
     {
       "code": "KPF",
@@ -2104,7 +3077,14 @@
       "close_price": 27.15,
       "init_margin_amount": 7331,
       "open_interest": 401.0,
-      "volume": 7.0
+      "volume": 7.0,
+      "change": -0.15,
+      "change_pct": -0.55,
+      "high": 27.15,
+      "low": 27.15,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 24.2
     },
     {
       "code": "KSF",
@@ -2119,7 +3099,14 @@
       "close_price": 219.0,
       "init_margin_amount": 70956,
       "open_interest": 67.0,
-      "volume": 15.0
+      "volume": 15.0,
+      "change": -1.0,
+      "change_pct": -0.46,
+      "high": 222.0,
+      "low": 216.0,
+      "oi_change": 1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 10.2
     },
     {
       "code": "SCF",
@@ -2134,7 +3121,14 @@
       "close_price": 219.0,
       "init_margin_amount": 3548,
       "open_interest": 827.0,
-      "volume": 125.0
+      "volume": 125.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 219.5,
+      "low": 215.5,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 98.2
     },
     {
       "code": "KUF",
@@ -2149,7 +3143,14 @@
       "close_price": 56.9,
       "init_margin_amount": 24581,
       "open_interest": 5083.0,
-      "volume": 2553.0
+      "volume": 2553.0,
+      "change": -0.9,
+      "change_pct": -1.56,
+      "high": 58.7,
+      "low": 56.6,
+      "oi_change": -1386.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2242.8
     },
     {
       "code": "KWF",
@@ -2164,7 +3165,14 @@
       "close_price": 46.25,
       "init_margin_amount": 14985,
       "open_interest": 895.0,
-      "volume": 108.0
+      "volume": 108.0,
+      "change": -0.35,
+      "change_pct": -0.75,
+      "high": 47.7,
+      "low": 46.05,
+      "oi_change": -6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 128.8
     },
     {
       "code": "LBF",
@@ -2179,7 +3187,14 @@
       "close_price": 491.0,
       "init_margin_amount": 159084,
       "open_interest": 451.0,
-      "volume": 729.0
+      "volume": 729.0,
+      "change": 3.5,
+      "change_pct": 0.72,
+      "high": 529.0,
+      "low": 487.0,
+      "oi_change": -71.0,
+      "avg_volume_days": 4,
+      "avg_volume": 371.2
     },
     {
       "code": "LCF",
@@ -2194,7 +3209,14 @@
       "close_price": 109.0,
       "init_margin_amount": 29431,
       "open_interest": 770.0,
-      "volume": 234.0
+      "volume": 234.0,
+      "change": -1.0,
+      "change_pct": -0.91,
+      "high": 110.5,
+      "low": 109.0,
+      "oi_change": -47.0,
+      "avg_volume_days": 4,
+      "avg_volume": 194.2
     },
     {
       "code": "LEF",
@@ -2209,7 +3231,14 @@
       "close_price": 635.0,
       "init_margin_amount": 205740,
       "open_interest": 297.0,
-      "volume": 592.0
+      "volume": 592.0,
+      "change": 55.0,
+      "change_pct": 9.52,
+      "high": 635.0,
+      "low": 570.0,
+      "oi_change": 134.0,
+      "avg_volume_days": 4,
+      "avg_volume": 258.0
     },
     {
       "code": "QJF",
@@ -2224,7 +3253,14 @@
       "close_price": 635.0,
       "init_margin_amount": 10287,
       "open_interest": 2281.0,
-      "volume": 5388.0
+      "volume": 5388.0,
+      "change": 57.0,
+      "change_pct": 9.86,
+      "high": 635.0,
+      "low": 563.0,
+      "oi_change": -495.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2560.2
     },
     {
       "code": "LIF",
@@ -2239,7 +3275,14 @@
       "close_price": 64.6,
       "init_margin_amount": 20931,
       "open_interest": 482.0,
-      "volume": 132.0
+      "volume": 132.0,
+      "change": -2.9,
+      "change_pct": -4.3,
+      "high": 67.0,
+      "low": 64.6,
+      "oi_change": -58.0,
+      "avg_volume_days": 4,
+      "avg_volume": 271.8
     },
     {
       "code": "LMF",
@@ -2254,7 +3297,14 @@
       "close_price": 85.3,
       "init_margin_amount": 23031,
       "open_interest": 474.0,
-      "volume": 214.0
+      "volume": 214.0,
+      "change": -8.5,
+      "change_pct": -9.06,
+      "high": 93.5,
+      "low": 84.5,
+      "oi_change": -43.0,
+      "avg_volume_days": 4,
+      "avg_volume": 350.0
     },
     {
       "code": "LOF",
@@ -2269,7 +3319,14 @@
       "close_price": 24.25,
       "init_margin_amount": 6548,
       "open_interest": 100.0,
-      "volume": 35.0
+      "volume": 35.0,
+      "change": 0.15,
+      "change_pct": 0.62,
+      "high": 24.35,
+      "low": 24.0,
+      "oi_change": -25.0,
+      "avg_volume_days": 4,
+      "avg_volume": 67.8
     },
     {
       "code": "LQF",
@@ -2284,7 +3341,14 @@
       "close_price": 69.3,
       "init_margin_amount": 22454,
       "open_interest": 3712.0,
-      "volume": 3767.0
+      "volume": 3767.0,
+      "change": -0.1,
+      "change_pct": -0.14,
+      "high": 72.9,
+      "low": 68.3,
+      "oi_change": -668.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2590.2
     },
     {
       "code": "LRF",
@@ -2299,7 +3363,14 @@
       "close_price": 31.55,
       "init_margin_amount": 8519,
       "open_interest": 1955.0,
-      "volume": 362.0
+      "volume": 362.0,
+      "change": 0.35,
+      "change_pct": 1.12,
+      "high": 31.55,
+      "low": 30.9,
+      "oi_change": -148.0,
+      "avg_volume_days": 4,
+      "avg_volume": 176.5
     },
     {
       "code": "LTF",
@@ -2314,7 +3385,14 @@
       "close_price": 100.0,
       "init_margin_amount": 27000,
       "open_interest": 213.0,
-      "volume": 36.0
+      "volume": 36.0,
+      "change": -1.5,
+      "change_pct": -1.48,
+      "high": 101.0,
+      "low": 99.2,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 21.2
     },
     {
       "code": "LUF",
@@ -2329,7 +3407,14 @@
       "close_price": 477.0,
       "init_margin_amount": 193185,
       "open_interest": 3999.0,
-      "volume": 5308.0
+      "volume": 5308.0,
+      "change": 2.0,
+      "change_pct": 0.42,
+      "high": 507.0,
+      "low": 472.5,
+      "oi_change": -279.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5114.5
     },
     {
       "code": "LVF",
@@ -2344,7 +3429,14 @@
       "close_price": 114.0,
       "init_margin_amount": 30781,
       "open_interest": 229.0,
-      "volume": 21.0
+      "volume": 21.0,
+      "change": 1.0,
+      "change_pct": 0.88,
+      "high": 115.0,
+      "low": 113.0,
+      "oi_change": 6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 76.2
     },
     {
       "code": "LWF",
@@ -2359,7 +3451,14 @@
       "close_price": 328.5,
       "init_margin_amount": 106434,
       "open_interest": 155.0,
-      "volume": 37.0
+      "volume": 37.0,
+      "change": 2.5,
+      "change_pct": 0.77,
+      "high": 328.5,
+      "low": 322.5,
+      "oi_change": -16.0,
+      "avg_volume_days": 4,
+      "avg_volume": 47.5
     },
     {
       "code": "LXF",
@@ -2374,7 +3473,14 @@
       "close_price": 665.0,
       "init_margin_amount": 269325,
       "open_interest": 9006.0,
-      "volume": 7944.0
+      "volume": 7944.0,
+      "change": 60.0,
+      "change_pct": 9.92,
+      "high": 665.0,
+      "low": 615.0,
+      "oi_change": -1639.0,
+      "avg_volume_days": 4,
+      "avg_volume": 7835.0
     },
     {
       "code": "QEF",
@@ -2389,7 +3495,14 @@
       "close_price": 665.0,
       "init_margin_amount": 13467,
       "open_interest": 23142.0,
-      "volume": 13643.0
+      "volume": 13643.0,
+      "change": 60.0,
+      "change_pct": 9.92,
+      "high": 665.0,
+      "low": 615.0,
+      "oi_change": -1416.0,
+      "avg_volume_days": 4,
+      "avg_volume": 21631.8
     },
     {
       "code": "LYF",
@@ -2404,7 +3517,14 @@
       "close_price": 1235.0,
       "init_margin_amount": 533521,
       "open_interest": 2441.0,
-      "volume": 2463.0
+      "volume": 2463.0,
+      "change": -40.0,
+      "change_pct": -3.13,
+      "high": 1350.0,
+      "low": 1217.0,
+      "oi_change": -197.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1636.8
     },
     {
       "code": "QSF",
@@ -2419,7 +3539,14 @@
       "close_price": 1235.0,
       "init_margin_amount": 26677,
       "open_interest": 9027.0,
-      "volume": 12249.0
+      "volume": 12249.0,
+      "change": -42.0,
+      "change_pct": -3.29,
+      "high": 1320.0,
+      "low": 1217.0,
+      "oi_change": -17.0,
+      "avg_volume_days": 4,
+      "avg_volume": 8537.8
     },
     {
       "code": "MBF",
@@ -2434,7 +3561,14 @@
       "close_price": 43.1,
       "init_margin_amount": 13965,
       "open_interest": 370.0,
-      "volume": 48.0
+      "volume": 48.0,
+      "change": 0.45,
+      "change_pct": 1.06,
+      "high": 43.65,
+      "low": 42.75,
+      "oi_change": 16.0,
+      "avg_volume_days": 4,
+      "avg_volume": 38.2
     },
     {
       "code": "MJF",
@@ -2449,7 +3583,14 @@
       "close_price": 2296.0,
       "init_margin_amount": 929881,
       "open_interest": 142.0,
-      "volume": 98.0
+      "volume": 98.0,
+      "change": 105.0,
+      "change_pct": 4.77,
+      "high": 2386.0,
+      "low": 2208.0,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 58.2
     },
     {
       "code": "VDF",
@@ -2464,7 +3605,14 @@
       "close_price": 2296.0,
       "init_margin_amount": 46494,
       "open_interest": 1467.0,
-      "volume": 902.0
+      "volume": 902.0,
+      "change": 92.0,
+      "change_pct": 4.18,
+      "high": 2390.0,
+      "low": 2232.0,
+      "oi_change": -24.0,
+      "avg_volume_days": 4,
+      "avg_volume": 901.0
     },
     {
       "code": "MKF",
@@ -2479,7 +3627,14 @@
       "close_price": 81.9,
       "init_margin_amount": 22113,
       "open_interest": 273.0,
-      "volume": 25.0
+      "volume": 25.0,
+      "change": 0.6,
+      "change_pct": 0.74,
+      "high": 82.5,
+      "low": 80.2,
+      "oi_change": -6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 39.0
     },
     {
       "code": "MQF",
@@ -2494,7 +3649,14 @@
       "close_price": 215.5,
       "init_margin_amount": 69822,
       "open_interest": 471.0,
-      "volume": 311.0
+      "volume": 311.0,
+      "change": 4.0,
+      "change_pct": 1.88,
+      "high": 225.0,
+      "low": 214.0,
+      "oi_change": -93.0,
+      "avg_volume_days": 4,
+      "avg_volume": 278.0
     },
     {
       "code": "MVF",
@@ -2509,7 +3671,14 @@
       "close_price": 42.05,
       "init_margin_amount": 11354,
       "open_interest": 242.0,
-      "volume": 10.0
+      "volume": 10.0,
+      "change": -0.25,
+      "change_pct": -0.59,
+      "high": 42.2,
+      "low": 41.95,
+      "oi_change": 4.0,
+      "avg_volume_days": 4,
+      "avg_volume": 17.8
     },
     {
       "code": "MYF",
@@ -2524,7 +3693,14 @@
       "close_price": 95.8,
       "init_margin_amount": 25866,
       "open_interest": 2.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3.2
     },
     {
       "code": "OMF",
@@ -2539,7 +3715,14 @@
       "close_price": 95.8,
       "init_margin_amount": 1294,
       "open_interest": 89.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 19.0
     },
     {
       "code": "NAF",
@@ -2554,7 +3737,14 @@
       "close_price": 386.5,
       "init_margin_amount": 166969,
       "open_interest": 3356.0,
-      "volume": 3479.0
+      "volume": 3479.0,
+      "change": -18.5,
+      "change_pct": -4.58,
+      "high": 419.5,
+      "low": 384.5,
+      "oi_change": -687.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2735.8
     },
     {
       "code": "QIF",
@@ -2569,7 +3759,14 @@
       "close_price": 386.5,
       "init_margin_amount": 8349,
       "open_interest": 9625.0,
-      "volume": 9093.0
+      "volume": 9093.0,
+      "change": -17.0,
+      "change_pct": -4.21,
+      "high": 419.0,
+      "low": 384.0,
+      "oi_change": -1711.0,
+      "avg_volume_days": 4,
+      "avg_volume": 6539.2
     },
     {
       "code": "NBF",
@@ -2584,7 +3781,14 @@
       "close_price": 229.0,
       "init_margin_amount": 92745,
       "open_interest": 25.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2.8
     },
     {
       "code": "NCF",
@@ -2599,7 +3803,14 @@
       "close_price": 407.5,
       "init_margin_amount": 165038,
       "open_interest": 169.0,
-      "volume": 137.0
+      "volume": 137.0,
+      "change": -9.5,
+      "change_pct": -2.28,
+      "high": 420.0,
+      "low": 406.0,
+      "oi_change": -51.0,
+      "avg_volume_days": 4,
+      "avg_volume": 371.2
     },
     {
       "code": "VJF",
@@ -2614,7 +3825,14 @@
       "close_price": 407.5,
       "init_margin_amount": 8252,
       "open_interest": 914.0,
-      "volume": 586.0
+      "volume": 586.0,
+      "change": -9.0,
+      "change_pct": -2.16,
+      "high": 420.0,
+      "low": 406.0,
+      "oi_change": -35.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1327.5
     },
     {
       "code": "NDF",
@@ -2629,7 +3847,14 @@
       "close_price": 413.5,
       "init_margin_amount": 167468,
       "open_interest": 1615.0,
-      "volume": 869.0
+      "volume": 869.0,
+      "change": 3.0,
+      "change_pct": 0.73,
+      "high": 418.0,
+      "low": 408.0,
+      "oi_change": -221.0,
+      "avg_volume_days": 4,
+      "avg_volume": 852.2
     },
     {
       "code": "NEF",
@@ -2644,7 +3869,14 @@
       "close_price": 233.0,
       "init_margin_amount": 94365,
       "open_interest": 604.0,
-      "volume": 857.0
+      "volume": 857.0,
+      "change": 15.5,
+      "change_pct": 7.13,
+      "high": 238.0,
+      "low": 217.5,
+      "oi_change": -106.0,
+      "avg_volume_days": 4,
+      "avg_volume": 647.2
     },
     {
       "code": "NGF",
@@ -2659,7 +3891,14 @@
       "close_price": 122.5,
       "init_margin_amount": 49613,
       "open_interest": 143.0,
-      "volume": 26.0
+      "volume": 26.0,
+      "change": 2.5,
+      "change_pct": 2.08,
+      "high": 124.0,
+      "low": 122.0,
+      "oi_change": -9.0,
+      "avg_volume_days": 4,
+      "avg_volume": 17.5
     },
     {
       "code": "NIF",
@@ -2674,7 +3913,14 @@
       "close_price": 34.7,
       "init_margin_amount": 9369,
       "open_interest": 398.0,
-      "volume": 546.0
+      "volume": 546.0,
+      "change": 0.15,
+      "change_pct": 0.43,
+      "high": 34.8,
+      "low": 33.9,
+      "oi_change": -147.0,
+      "avg_volume_days": 4,
+      "avg_volume": 240.8
     },
     {
       "code": "NJF",
@@ -2689,7 +3935,14 @@
       "close_price": 32.75,
       "init_margin_amount": 8843,
       "open_interest": 215.0,
-      "volume": 14.0
+      "volume": 14.0,
+      "change": -0.45,
+      "change_pct": -1.36,
+      "high": 32.95,
+      "low": 32.75,
+      "oi_change": -14.0,
+      "avg_volume_days": 4,
+      "avg_volume": 45.0
     },
     {
       "code": "NLF",
@@ -2704,7 +3957,14 @@
       "close_price": 163.5,
       "init_margin_amount": 52974,
       "open_interest": 3586.0,
-      "volume": 2999.0
+      "volume": 2999.0,
+      "change": 4.5,
+      "change_pct": 2.83,
+      "high": 166.5,
+      "low": 161.5,
+      "oi_change": -216.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1727.2
     },
     {
       "code": "NMF",
@@ -2719,7 +3979,14 @@
       "close_price": 84.9,
       "init_margin_amount": 34385,
       "open_interest": 1853.0,
-      "volume": 760.0
+      "volume": 760.0,
+      "change": -0.5,
+      "change_pct": -0.59,
+      "high": 87.0,
+      "low": 83.9,
+      "oi_change": -60.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1029.2
     },
     {
       "code": "NOF",
@@ -2734,7 +4001,14 @@
       "close_price": 189.0,
       "init_margin_amount": 61236,
       "open_interest": 2866.0,
-      "volume": 5128.0
+      "volume": 5128.0,
+      "change": 3.5,
+      "change_pct": 1.89,
+      "high": 202.5,
+      "low": 187.5,
+      "oi_change": 708.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2578.5
     },
     {
       "code": "NQF",
@@ -2749,7 +4023,14 @@
       "close_price": 429.5,
       "init_margin_amount": 115966,
       "open_interest": 30.0,
-      "volume": 13.0
+      "volume": 13.0,
+      "change": -1.5,
+      "change_pct": -0.35,
+      "high": 442.5,
+      "low": 429.5,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 11.5
     },
     {
       "code": "NSF",
@@ -2764,7 +4045,14 @@
       "close_price": 165.0,
       "init_margin_amount": 53460,
       "open_interest": 5935.0,
-      "volume": 3022.0
+      "volume": 3022.0,
+      "change": 8.0,
+      "change_pct": 5.1,
+      "high": 172.0,
+      "low": 158.5,
+      "oi_change": 15.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3339.2
     },
     {
       "code": "NUF",
@@ -2779,7 +4067,14 @@
       "close_price": 26.4,
       "init_margin_amount": 8554,
       "open_interest": 29.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": -0.5,
+      "change_pct": -1.86,
+      "high": 26.4,
+      "low": 26.4,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1.8
     },
     {
       "code": "NVF",
@@ -2794,7 +4089,14 @@
       "close_price": 172.0,
       "init_margin_amount": 55728,
       "open_interest": 1836.0,
-      "volume": 859.0
+      "volume": 859.0,
+      "change": 6.0,
+      "change_pct": 3.61,
+      "high": 173.0,
+      "low": 164.0,
+      "oi_change": -38.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1112.5
     },
     {
       "code": "NWF",
@@ -2809,7 +4111,14 @@
       "close_price": 2287.0,
       "init_margin_amount": 926236,
       "open_interest": 1954.0,
-      "volume": 1340.0
+      "volume": 1340.0,
+      "change": 71.0,
+      "change_pct": 3.2,
+      "high": 2304.0,
+      "low": 2171.0,
+      "oi_change": -74.0,
+      "avg_volume_days": 4,
+      "avg_volume": 948.2
     },
     {
       "code": "QNF",
@@ -2824,7 +4133,14 @@
       "close_price": 2287.0,
       "init_margin_amount": 46312,
       "open_interest": 10993.0,
-      "volume": 9805.0
+      "volume": 9805.0,
+      "change": 74.0,
+      "change_pct": 3.33,
+      "high": 2312.0,
+      "low": 2170.0,
+      "oi_change": -11.0,
+      "avg_volume_days": 4,
+      "avg_volume": 7266.8
     },
     {
       "code": "ODF",
@@ -2839,7 +4155,14 @@
       "close_price": 97.6,
       "init_margin_amount": 39528,
       "open_interest": 246.0,
-      "volume": 8.0
+      "volume": 8.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": null,
+      "low": null,
+      "oi_change": -2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 35.8
     },
     {
       "code": "OEF",
@@ -2854,7 +4177,14 @@
       "close_price": 13.85,
       "init_margin_amount": 5610,
       "open_interest": 12056.0,
-      "volume": 875.0
+      "volume": 875.0,
+      "change": -0.2,
+      "change_pct": -1.42,
+      "high": 14.4,
+      "low": 13.75,
+      "oi_change": 106.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1395.0
     },
     {
       "code": "OHF",
@@ -2869,7 +4199,14 @@
       "close_price": 130.0,
       "init_margin_amount": 35100,
       "open_interest": 74.0,
-      "volume": 12.0
+      "volume": 12.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 130.0,
+      "low": 129.5,
+      "oi_change": 3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 9.2
     },
     {
       "code": "OPF",
@@ -2884,7 +4221,14 @@
       "close_price": 2280.0,
       "init_margin_amount": 923401,
       "open_interest": 435.0,
-      "volume": 117.0
+      "volume": 117.0,
+      "change": 54.0,
+      "change_pct": 2.42,
+      "high": 2300.0,
+      "low": 2240.0,
+      "oi_change": -48.0,
+      "avg_volume_days": 4,
+      "avg_volume": 137.8
     },
     {
       "code": "SEF",
@@ -2899,7 +4243,14 @@
       "close_price": 2280.0,
       "init_margin_amount": 46170,
       "open_interest": 2802.0,
-      "volume": 1524.0
+      "volume": 1524.0,
+      "change": 53.0,
+      "change_pct": 2.38,
+      "high": 2311.0,
+      "low": 2219.0,
+      "oi_change": 109.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1714.8
     },
     {
       "code": "OQF",
@@ -2914,7 +4265,14 @@
       "close_price": 451.0,
       "init_margin_amount": 121771,
       "open_interest": 377.0,
-      "volume": 131.0
+      "volume": 131.0,
+      "change": -8.5,
+      "change_pct": -1.85,
+      "high": 472.0,
+      "low": 451.0,
+      "oi_change": -49.0,
+      "avg_volume_days": 4,
+      "avg_volume": 127.0
     },
     {
       "code": "ORF",
@@ -2929,7 +4287,14 @@
       "close_price": 51.2,
       "init_margin_amount": 16589,
       "open_interest": 255.0,
-      "volume": 21.0
+      "volume": 21.0,
+      "change": -1.1,
+      "change_pct": -2.1,
+      "high": 52.7,
+      "low": 51.2,
+      "oi_change": -15.0,
+      "avg_volume_days": 4,
+      "avg_volume": 56.2
     },
     {
       "code": "OSF",
@@ -2944,7 +4309,14 @@
       "close_price": 10.15,
       "init_margin_amount": 2741,
       "open_interest": 156.0,
-      "volume": 174.0
+      "volume": 174.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 10.9,
+      "low": 10.15,
+      "oi_change": -28.0,
+      "avg_volume_days": 4,
+      "avg_volume": 56.8
     },
     {
       "code": "OTF",
@@ -2959,7 +4331,14 @@
       "close_price": 2655.0,
       "init_margin_amount": 1828233,
       "open_interest": 718.0,
-      "volume": 553.0
+      "volume": 553.0,
+      "change": -40.0,
+      "change_pct": -1.46,
+      "high": 2925.0,
+      "low": 2650.0,
+      "oi_change": 24.0,
+      "avg_volume_days": 4,
+      "avg_volume": 346.5
     },
     {
       "code": "OUF",
@@ -2974,7 +4353,14 @@
       "close_price": 45.25,
       "init_margin_amount": 14661,
       "open_interest": 6.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 0.0
     },
     {
       "code": "OVF",
@@ -2989,7 +4375,14 @@
       "close_price": 1595.0,
       "init_margin_amount": 969122,
       "open_interest": 1774.0,
-      "volume": 1135.0
+      "volume": 1135.0,
+      "change": -25.0,
+      "change_pct": -1.54,
+      "high": 1668.0,
+      "low": 1536.0,
+      "oi_change": -133.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1062.5
     },
     {
       "code": "OWF",
@@ -3004,7 +4397,14 @@
       "close_price": 1026.0,
       "init_margin_amount": 415530,
       "open_interest": 2162.0,
-      "volume": 1002.0
+      "volume": 1002.0,
+      "change": 93.0,
+      "change_pct": 9.97,
+      "high": 1026.0,
+      "low": 953.0,
+      "oi_change": 77.0,
+      "avg_volume_days": 4,
+      "avg_volume": 971.2
     },
     {
       "code": "PBF",
@@ -3019,7 +4419,14 @@
       "close_price": 1026.0,
       "init_margin_amount": 20777,
       "open_interest": 9908.0,
-      "volume": 5809.0
+      "volume": 5809.0,
+      "change": 93.0,
+      "change_pct": 9.97,
+      "high": 1026.0,
+      "low": 950.0,
+      "oi_change": -308.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5360.5
     },
     {
       "code": "OXF",
@@ -3034,7 +4441,14 @@
       "close_price": 2825.0,
       "init_margin_amount": 1144125,
       "open_interest": 66.0,
-      "volume": 13.0
+      "volume": 13.0,
+      "change": -20.0,
+      "change_pct": -0.7,
+      "high": 2930.0,
+      "low": 2830.0,
+      "oi_change": -2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 14.0
     },
     {
       "code": "OYF",
@@ -3049,7 +4463,14 @@
       "close_price": 2825.0,
       "init_margin_amount": 57207,
       "open_interest": 917.0,
-      "volume": 181.0
+      "volume": 181.0,
+      "change": -25.0,
+      "change_pct": -0.88,
+      "high": 2930.0,
+      "low": 2815.0,
+      "oi_change": -55.0,
+      "avg_volume_days": 4,
+      "avg_volume": 301.2
     },
     {
       "code": "OZF",
@@ -3064,7 +4485,14 @@
       "close_price": 628.0,
       "init_margin_amount": 203472,
       "open_interest": 2519.0,
-      "volume": 1544.0
+      "volume": 1544.0,
+      "change": 2.0,
+      "change_pct": 0.32,
+      "high": 640.0,
+      "low": 622.0,
+      "oi_change": -185.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2243.8
     },
     {
       "code": "VPF",
@@ -3079,7 +4507,14 @@
       "close_price": 628.0,
       "init_margin_amount": 10174,
       "open_interest": 2664.0,
-      "volume": 1351.0
+      "volume": 1351.0,
+      "change": 1.0,
+      "change_pct": 0.16,
+      "high": 640.0,
+      "low": 622.0,
+      "oi_change": -306.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1944.8
     },
     {
       "code": "PAF",
@@ -3094,7 +4529,14 @@
       "close_price": 201.0,
       "init_margin_amount": 65124,
       "open_interest": 182.0,
-      "volume": 39.0
+      "volume": 39.0,
+      "change": -2.0,
+      "change_pct": -0.99,
+      "high": 202.0,
+      "low": 198.0,
+      "oi_change": 9.0,
+      "avg_volume_days": 4,
+      "avg_volume": 36.0
     },
     {
       "code": "PCF",
@@ -3109,7 +4551,14 @@
       "close_price": 63.5,
       "init_margin_amount": 17145,
       "open_interest": 26.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": 0.9,
+      "change_pct": 1.44,
+      "high": 63.5,
+      "low": 63.5,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2.2
     },
     {
       "code": "PDF",
@@ -3124,7 +4573,14 @@
       "close_price": 141.5,
       "init_margin_amount": 38205,
       "open_interest": 8.0,
-      "volume": 11.0
+      "volume": 11.0,
+      "change": 7.0,
+      "change_pct": 5.2,
+      "high": 141.5,
+      "low": 138.0,
+      "oi_change": -3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4.5
     },
     {
       "code": "PEF",
@@ -3139,7 +4595,14 @@
       "close_price": 89.0,
       "init_margin_amount": 36045,
       "open_interest": 1735.0,
-      "volume": 1154.0
+      "volume": 1154.0,
+      "change": 2.1,
+      "change_pct": 2.42,
+      "high": 93.3,
+      "low": 88.3,
+      "oi_change": 2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 753.0
     },
     {
       "code": "PGF",
@@ -3154,7 +4617,14 @@
       "close_price": 25.9,
       "init_margin_amount": 6994,
       "open_interest": 138.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1.8
     },
     {
       "code": "PHF",
@@ -3169,7 +4639,14 @@
       "close_price": 1434.0,
       "init_margin_amount": 580770,
       "open_interest": 281.0,
-      "volume": 174.0
+      "volume": 174.0,
+      "change": -4.0,
+      "change_pct": -0.28,
+      "high": 1466.0,
+      "low": 1418.0,
+      "oi_change": -96.0,
+      "avg_volume_days": 4,
+      "avg_volume": 51.8
     },
     {
       "code": "PNF",
@@ -3184,7 +4661,14 @@
       "close_price": 1434.0,
       "init_margin_amount": 29039,
       "open_interest": 3376.0,
-      "volume": 1427.0
+      "volume": 1427.0,
+      "change": 2.0,
+      "change_pct": 0.14,
+      "high": 1462.0,
+      "low": 1432.0,
+      "oi_change": -820.0,
+      "avg_volume_days": 4,
+      "avg_volume": 542.5
     },
     {
       "code": "PIF",
@@ -3199,7 +4683,14 @@
       "close_price": 2710.0,
       "init_margin_amount": 1097550,
       "open_interest": 18.0,
-      "volume": 2.0
+      "volume": 2.0,
+      "change": -25.0,
+      "change_pct": -0.93,
+      "high": 2655.0,
+      "low": 2655.0,
+      "oi_change": -2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3.8
     },
     {
       "code": "RSF",
@@ -3214,7 +4705,14 @@
       "close_price": 2710.0,
       "init_margin_amount": 54878,
       "open_interest": 1116.0,
-      "volume": 360.0
+      "volume": 360.0,
+      "change": 30.0,
+      "change_pct": 1.12,
+      "high": 2800.0,
+      "low": 2650.0,
+      "oi_change": -110.0,
+      "avg_volume_days": 4,
+      "avg_volume": 437.8
     },
     {
       "code": "PJF",
@@ -3229,7 +4727,14 @@
       "close_price": 5715.0,
       "init_margin_amount": 2314575,
       "open_interest": 229.0,
-      "volume": 42.0
+      "volume": 42.0,
+      "change": -70.0,
+      "change_pct": -1.21,
+      "high": 5835.0,
+      "low": 5685.0,
+      "oi_change": -14.0,
+      "avg_volume_days": 4,
+      "avg_volume": 57.5
     },
     {
       "code": "SFF",
@@ -3244,7 +4749,14 @@
       "close_price": 5715.0,
       "init_margin_amount": 115729,
       "open_interest": 2593.0,
-      "volume": 1263.0
+      "volume": 1263.0,
+      "change": -65.0,
+      "change_pct": -1.12,
+      "high": 5880.0,
+      "low": 5655.0,
+      "oi_change": -50.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1821.2
     },
     {
       "code": "PKF",
@@ -3259,7 +4771,14 @@
       "close_price": 224.0,
       "init_margin_amount": 90720,
       "open_interest": 2806.0,
-      "volume": 5828.0
+      "volume": 5828.0,
+      "change": 20.0,
+      "change_pct": 9.8,
+      "high": 224.0,
+      "low": 202.5,
+      "oi_change": 1177.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4074.0
     },
     {
       "code": "PLF",
@@ -3274,7 +4793,14 @@
       "close_price": 113.0,
       "init_margin_amount": 45765,
       "open_interest": 14602.0,
-      "volume": 4159.0
+      "volume": 4159.0,
+      "change": 10.0,
+      "change_pct": 9.71,
+      "high": 113.0,
+      "low": 105.5,
+      "oi_change": -359.0,
+      "avg_volume_days": 4,
+      "avg_volume": 8398.5
     },
     {
       "code": "PMF",
@@ -3289,7 +4815,14 @@
       "close_price": 122.5,
       "init_margin_amount": 33075,
       "open_interest": 22.0,
-      "volume": 3.0
+      "volume": 3.0,
+      "change": -1.5,
+      "change_pct": -1.21,
+      "high": 122.5,
+      "low": 122.0,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 9.8
     },
     {
       "code": "PPF",
@@ -3304,7 +4837,14 @@
       "close_price": 27.85,
       "init_margin_amount": 9024,
       "open_interest": 71.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": -0.25,
+      "change_pct": -0.89,
+      "high": 27.85,
+      "low": 27.85,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 14.5
     },
     {
       "code": "PQF",
@@ -3319,7 +4859,14 @@
       "close_price": 425.0,
       "init_margin_amount": 195075,
       "open_interest": 2675.0,
-      "volume": 5079.0
+      "volume": 5079.0,
+      "change": 5.5,
+      "change_pct": 1.31,
+      "high": 449.5,
+      "low": 416.0,
+      "oi_change": -128.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3364.5
     },
     {
       "code": "PRF",
@@ -3334,7 +4881,14 @@
       "close_price": 118.5,
       "init_margin_amount": 47993,
       "open_interest": 260.0,
-      "volume": 76.0
+      "volume": 76.0,
+      "change": -1.5,
+      "change_pct": -1.25,
+      "high": 122.5,
+      "low": 118.0,
+      "oi_change": -23.0,
+      "avg_volume_days": 4,
+      "avg_volume": 141.0
     },
     {
       "code": "PSF",
@@ -3349,7 +4903,14 @@
       "close_price": 92.2,
       "init_margin_amount": 37341,
       "open_interest": 3584.0,
-      "volume": 595.0
+      "volume": 595.0,
+      "change": -0.5,
+      "change_pct": -0.54,
+      "high": 93.7,
+      "low": 91.2,
+      "oi_change": -164.0,
+      "avg_volume_days": 4,
+      "avg_volume": 654.5
     },
     {
       "code": "PTF",
@@ -3364,7 +4925,14 @@
       "close_price": 1043.0,
       "init_margin_amount": 422415,
       "open_interest": 518.0,
-      "volume": 250.0
+      "volume": 250.0,
+      "change": -14.0,
+      "change_pct": -1.33,
+      "high": 1077.0,
+      "low": 1025.0,
+      "oi_change": -30.0,
+      "avg_volume_days": 4,
+      "avg_volume": 187.2
     },
     {
       "code": "ULF",
@@ -3379,7 +4947,14 @@
       "close_price": 1043.0,
       "init_margin_amount": 21121,
       "open_interest": 2435.0,
-      "volume": 1651.0
+      "volume": 1651.0,
+      "change": -14.0,
+      "change_pct": -1.33,
+      "high": 1089.0,
+      "low": 1024.0,
+      "oi_change": -317.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1175.5
     },
     {
       "code": "PVF",
@@ -3394,7 +4969,14 @@
       "close_price": 6070.0,
       "init_margin_amount": 2458350,
       "open_interest": 342.0,
-      "volume": 86.0
+      "volume": 86.0,
+      "change": 50.0,
+      "change_pct": 0.83,
+      "high": 6195.0,
+      "low": 6060.0,
+      "oi_change": 2.0,
+      "avg_volume_days": 4,
+      "avg_volume": 149.0
     },
     {
       "code": "PWF",
@@ -3409,7 +4991,14 @@
       "close_price": 6070.0,
       "init_margin_amount": 122918,
       "open_interest": 4677.0,
-      "volume": 2289.0
+      "volume": 2289.0,
+      "change": 75.0,
+      "change_pct": 1.25,
+      "high": 6215.0,
+      "low": 6020.0,
+      "oi_change": 27.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2744.2
     },
     {
       "code": "PXF",
@@ -3424,7 +5013,14 @@
       "close_price": 762.0,
       "init_margin_amount": 205740,
       "open_interest": 44.0,
-      "volume": 17.0
+      "volume": 17.0,
+      "change": -18.0,
+      "change_pct": -2.3,
+      "high": 768.0,
+      "low": 759.0,
+      "oi_change": 1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 22.5
     },
     {
       "code": "PYF",
@@ -3439,7 +5035,14 @@
       "close_price": 762.0,
       "init_margin_amount": 10287,
       "open_interest": 1024.0,
-      "volume": 278.0
+      "volume": 278.0,
+      "change": -20.0,
+      "change_pct": -2.56,
+      "high": 780.0,
+      "low": 751.0,
+      "oi_change": -75.0,
+      "avg_volume_days": 4,
+      "avg_volume": 213.8
     },
     {
       "code": "PZF",
@@ -3454,7 +5057,14 @@
       "close_price": 17440.0,
       "init_margin_amount": 7063200,
       "open_interest": 4.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": 590.0,
+      "change_pct": 3.4,
+      "high": 17960.0,
+      "low": 17960.0,
+      "oi_change": 1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1.5
     },
     {
       "code": "QAF",
@@ -3469,7 +5079,14 @@
       "close_price": 17440.0,
       "init_margin_amount": 353160,
       "open_interest": 251.0,
-      "volume": 69.0
+      "volume": 69.0,
+      "change": 70.0,
+      "change_pct": 0.4,
+      "high": 17900.0,
+      "low": 17260.0,
+      "oi_change": 15.0,
+      "avg_volume_days": 4,
+      "avg_volume": 57.5
     },
     {
       "code": "QBF",
@@ -3484,7 +5101,14 @@
       "close_price": 58.5,
       "init_margin_amount": 18954,
       "open_interest": 459.0,
-      "volume": 100.0
+      "volume": 100.0,
+      "change": 0.5,
+      "change_pct": 0.86,
+      "high": 59.6,
+      "low": 58.2,
+      "oi_change": -33.0,
+      "avg_volume_days": 4,
+      "avg_volume": 344.8
     },
     {
       "code": "QCF",
@@ -3499,7 +5123,14 @@
       "close_price": 65.6,
       "init_margin_amount": 21255,
       "open_interest": 520.0,
-      "volume": 85.0
+      "volume": 85.0,
+      "change": -2.2,
+      "change_pct": -3.24,
+      "high": 66.3,
+      "low": 64.8,
+      "oi_change": -11.0,
+      "avg_volume_days": 4,
+      "avg_volume": 105.8
     },
     {
       "code": "QDF",
@@ -3514,7 +5145,14 @@
       "close_price": 341.0,
       "init_margin_amount": 147313,
       "open_interest": 1010.0,
-      "volume": 450.0
+      "volume": 450.0,
+      "change": 31.0,
+      "change_pct": 10.0,
+      "high": 341.0,
+      "low": 318.5,
+      "oi_change": -51.0,
+      "avg_volume_days": 4,
+      "avg_volume": 471.5
     },
     {
       "code": "QKF",
@@ -3529,7 +5167,14 @@
       "close_price": 30.0,
       "init_margin_amount": 8101,
       "open_interest": 153.0,
-      "volume": 11.0
+      "volume": 11.0,
+      "change": -0.25,
+      "change_pct": -0.83,
+      "high": 30.3,
+      "low": 30.0,
+      "oi_change": -10.0,
+      "avg_volume_days": 4,
+      "avg_volume": 12.2
     },
     {
       "code": "QLF",
@@ -3544,7 +5189,14 @@
       "close_price": 323.5,
       "init_margin_amount": 131018,
       "open_interest": 5026.0,
-      "volume": 3335.0
+      "volume": 3335.0,
+      "change": -9.5,
+      "change_pct": -2.85,
+      "high": 343.0,
+      "low": 323.0,
+      "oi_change": -716.0,
+      "avg_volume_days": 4,
+      "avg_volume": 2398.0
     },
     {
       "code": "QOF",
@@ -3559,7 +5211,14 @@
       "close_price": 78.7,
       "init_margin_amount": 31874,
       "open_interest": 1377.0,
-      "volume": 786.0
+      "volume": 786.0,
+      "change": -0.3,
+      "change_pct": -0.38,
+      "high": 80.2,
+      "low": 77.3,
+      "oi_change": -122.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1025.5
     },
     {
       "code": "QPF",
@@ -3574,7 +5233,14 @@
       "close_price": 24.8,
       "init_margin_amount": 6696,
       "open_interest": 172.0,
-      "volume": 41.0
+      "volume": 41.0,
+      "change": -0.4,
+      "change_pct": -1.59,
+      "high": 26.0,
+      "low": 24.3,
+      "oi_change": -18.0,
+      "avg_volume_days": 4,
+      "avg_volume": 71.2
     },
     {
       "code": "QQF",
@@ -3589,7 +5255,14 @@
       "close_price": 52.8,
       "init_margin_amount": 17108,
       "open_interest": 89.0,
-      "volume": 14.0
+      "volume": 14.0,
+      "change": -0.9,
+      "change_pct": -1.68,
+      "high": 52.8,
+      "low": 52.2,
+      "oi_change": 3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4.2
     },
     {
       "code": "QTF",
@@ -3604,7 +5277,14 @@
       "close_price": 126.5,
       "init_margin_amount": 40986,
       "open_interest": 691.0,
-      "volume": 155.0
+      "volume": 155.0,
+      "change": 1.0,
+      "change_pct": 0.8,
+      "high": 129.5,
+      "low": 126.0,
+      "oi_change": -42.0,
+      "avg_volume_days": 4,
+      "avg_volume": 388.8
     },
     {
       "code": "QUF",
@@ -3619,7 +5299,14 @@
       "close_price": 93.3,
       "init_margin_amount": 37787,
       "open_interest": 2704.0,
-      "volume": 3922.0
+      "volume": 3922.0,
+      "change": 0.9,
+      "change_pct": 0.97,
+      "high": 98.8,
+      "low": 92.8,
+      "oi_change": -277.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4685.0
     },
     {
       "code": "QVF",
@@ -3634,7 +5321,14 @@
       "close_price": 40.4,
       "init_margin_amount": 16363,
       "open_interest": 210.0,
-      "volume": 12.0
+      "volume": 12.0,
+      "change": -0.1,
+      "change_pct": -0.25,
+      "high": 41.5,
+      "low": 40.4,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 15.5
     },
     {
       "code": "QWF",
@@ -3649,7 +5343,14 @@
       "close_price": 75.8,
       "init_margin_amount": 30700,
       "open_interest": 1123.0,
-      "volume": 253.0
+      "volume": 253.0,
+      "change": -0.9,
+      "change_pct": -1.17,
+      "high": 79.5,
+      "low": 75.5,
+      "oi_change": -36.0,
+      "avg_volume_days": 4,
+      "avg_volume": 313.8
     },
     {
       "code": "QXF",
@@ -3664,7 +5365,14 @@
       "close_price": 87.6,
       "init_margin_amount": 28383,
       "open_interest": 2469.0,
-      "volume": 837.0
+      "volume": 837.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 89.0,
+      "low": 86.6,
+      "oi_change": -232.0,
+      "avg_volume_days": 4,
+      "avg_volume": 881.2
     },
     {
       "code": "QYF",
@@ -3679,7 +5387,14 @@
       "close_price": 52.1,
       "init_margin_amount": 21101,
       "open_interest": 313.0,
-      "volume": 67.0
+      "volume": 67.0,
+      "change": 1.5,
+      "change_pct": 2.96,
+      "high": 52.3,
+      "low": 50.3,
+      "oi_change": -15.0,
+      "avg_volume_days": 4,
+      "avg_volume": 96.5
     },
     {
       "code": "QZF",
@@ -3694,7 +5409,14 @@
       "close_price": 75.3,
       "init_margin_amount": 30497,
       "open_interest": 9342.0,
-      "volume": 27532.0
+      "volume": 27532.0,
+      "change": 1.6,
+      "change_pct": 2.17,
+      "high": 77.8,
+      "low": 72.9,
+      "oi_change": 809.0,
+      "avg_volume_days": 4,
+      "avg_volume": 17266.0
     },
     {
       "code": "RAF",
@@ -3709,7 +5431,14 @@
       "close_price": 3225.0,
       "init_margin_amount": 1306125,
       "open_interest": 716.0,
-      "volume": 974.0
+      "volume": 974.0,
+      "change": 290.0,
+      "change_pct": 9.88,
+      "high": 3225.0,
+      "low": 2920.0,
+      "oi_change": -28.0,
+      "avg_volume_days": 4,
+      "avg_volume": 540.5
     },
     {
       "code": "UHF",
@@ -3724,7 +5453,14 @@
       "close_price": 3225.0,
       "init_margin_amount": 65307,
       "open_interest": 4674.0,
-      "volume": 5306.0
+      "volume": 5306.0,
+      "change": 290.0,
+      "change_pct": 9.88,
+      "high": 3225.0,
+      "low": 2920.0,
+      "oi_change": 39.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3121.8
     },
     {
       "code": "RBF",
@@ -3739,7 +5475,14 @@
       "close_price": 81.4,
       "init_margin_amount": 26374,
       "open_interest": 416.0,
-      "volume": 138.0
+      "volume": 138.0,
+      "change": -1.3,
+      "change_pct": -1.57,
+      "high": 83.5,
+      "low": 80.4,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 235.2
     },
     {
       "code": "RCF",
@@ -3754,7 +5497,14 @@
       "close_price": 64.2,
       "init_margin_amount": 20801,
       "open_interest": 1212.0,
-      "volume": 959.0
+      "volume": 959.0,
+      "change": 2.2,
+      "change_pct": 3.55,
+      "high": 65.2,
+      "low": 63.0,
+      "oi_change": -187.0,
+      "avg_volume_days": 4,
+      "avg_volume": 659.8
     },
     {
       "code": "RDF",
@@ -3769,7 +5519,14 @@
       "close_price": 14.9,
       "init_margin_amount": 4828,
       "open_interest": 61.0,
-      "volume": 17.0
+      "volume": 17.0,
+      "change": 0.35,
+      "change_pct": 2.41,
+      "high": 15.15,
+      "low": 14.9,
+      "oi_change": -12.0,
+      "avg_volume_days": 4,
+      "avg_volume": 12.8
     },
     {
       "code": "REF",
@@ -3784,7 +5541,14 @@
       "close_price": 126.5,
       "init_margin_amount": 51233,
       "open_interest": 1668.0,
-      "volume": 610.0
+      "volume": 610.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 131.5,
+      "low": 126.0,
+      "oi_change": -160.0,
+      "avg_volume_days": 4,
+      "avg_volume": 353.2
     },
     {
       "code": "RJF",
@@ -3799,7 +5563,14 @@
       "close_price": 37.9,
       "init_margin_amount": 12280,
       "open_interest": 243.0,
-      "volume": 66.0
+      "volume": 66.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 38.5,
+      "low": 37.9,
+      "oi_change": -20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 59.2
     },
     {
       "code": "RKF",
@@ -3814,7 +5585,14 @@
       "close_price": 1009.0,
       "init_margin_amount": 408645,
       "open_interest": 865.0,
-      "volume": 764.0
+      "volume": 764.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 1043.0,
+      "low": 993.0,
+      "oi_change": -87.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1028.8
     },
     {
       "code": "VGF",
@@ -3829,7 +5607,14 @@
       "close_price": 1009.0,
       "init_margin_amount": 20433,
       "open_interest": 4995.0,
-      "volume": 3472.0
+      "volume": 3472.0,
+      "change": 1.0,
+      "change_pct": 0.1,
+      "high": 1044.0,
+      "low": 994.0,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 4361.5
     },
     {
       "code": "RLF",
@@ -3844,7 +5629,14 @@
       "close_price": 28.05,
       "init_margin_amount": 11361,
       "open_interest": 964.0,
-      "volume": 113.0
+      "volume": 113.0,
+      "change": 1.4,
+      "change_pct": 5.25,
+      "high": 28.3,
+      "low": 27.25,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 60.2
     },
     {
       "code": "RNF",
@@ -3859,7 +5651,14 @@
       "close_price": 48.35,
       "init_margin_amount": 15666,
       "open_interest": 119.0,
-      "volume": 17.0
+      "volume": 17.0,
+      "change": 1.0,
+      "change_pct": 2.11,
+      "high": 48.35,
+      "low": 46.5,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 16.0
     },
     {
       "code": "ROF",
@@ -3874,7 +5673,14 @@
       "close_price": 88.0,
       "init_margin_amount": 23760,
       "open_interest": 34.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": -0.1,
+      "change_pct": -0.11,
+      "high": 88.0,
+      "low": 88.0,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 11.2
     },
     {
       "code": "RPF",
@@ -3889,7 +5695,14 @@
       "close_price": 82.0,
       "init_margin_amount": 22140,
       "open_interest": 104.0,
-      "volume": 116.0
+      "volume": 116.0,
+      "change": -0.8,
+      "change_pct": -0.97,
+      "high": 84.0,
+      "low": 78.0,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 184.5
     },
     {
       "code": "RRF",
@@ -3904,7 +5717,14 @@
       "close_price": 82.0,
       "init_margin_amount": 1107,
       "open_interest": 369.0,
-      "volume": 350.0
+      "volume": 350.0,
+      "change": -0.7,
+      "change_pct": -0.85,
+      "high": 84.1,
+      "low": 78.3,
+      "oi_change": 123.0,
+      "avg_volume_days": 4,
+      "avg_volume": 243.2
     },
     {
       "code": "RUF",
@@ -3919,7 +5739,14 @@
       "close_price": 103.5,
       "init_margin_amount": 41918,
       "open_interest": 419.0,
-      "volume": 91.0
+      "volume": 91.0,
+      "change": -2.0,
+      "change_pct": -1.9,
+      "high": 107.0,
+      "low": 102.5,
+      "oi_change": 20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 113.8
     },
     {
       "code": "SWF",
@@ -3934,7 +5761,14 @@
       "close_price": 103.5,
       "init_margin_amount": 2096,
       "open_interest": 984.0,
-      "volume": 186.0
+      "volume": 186.0,
+      "change": -1.5,
+      "change_pct": -1.42,
+      "high": 107.0,
+      "low": 102.5,
+      "oi_change": -21.0,
+      "avg_volume_days": 4,
+      "avg_volume": 177.5
     },
     {
       "code": "SAF",
@@ -3949,7 +5783,14 @@
       "close_price": 188.0,
       "init_margin_amount": 60912,
       "open_interest": 216.0,
-      "volume": 15.0
+      "volume": 15.0,
+      "change": -2.5,
+      "change_pct": -1.31,
+      "high": 189.0,
+      "low": 188.0,
+      "oi_change": -5.0,
+      "avg_volume_days": 4,
+      "avg_volume": 33.0
     },
     {
       "code": "SBF",
@@ -3964,7 +5805,14 @@
       "close_price": 13.35,
       "init_margin_amount": 4326,
       "open_interest": 335.0,
-      "volume": 7.0
+      "volume": 7.0,
+      "change": -0.1,
+      "change_pct": -0.72,
+      "high": 13.75,
+      "low": 13.55,
+      "oi_change": -3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 48.0
     },
     {
       "code": "SDF",
@@ -3979,7 +5827,14 @@
       "close_price": 172.0,
       "init_margin_amount": 55728,
       "open_interest": 793.0,
-      "volume": 950.0
+      "volume": 950.0,
+      "change": 5.5,
+      "change_pct": 3.3,
+      "high": 177.5,
+      "low": 167.0,
+      "oi_change": 60.0,
+      "avg_volume_days": 4,
+      "avg_volume": 447.0
     },
     {
       "code": "SJF",
@@ -3994,7 +5849,14 @@
       "close_price": 114.5,
       "init_margin_amount": 37098,
       "open_interest": 204.0,
-      "volume": 44.0
+      "volume": 44.0,
+      "change": -0.5,
+      "change_pct": -0.43,
+      "high": 117.0,
+      "low": 114.5,
+      "oi_change": -6.0,
+      "avg_volume_days": 4,
+      "avg_volume": 48.8
     },
     {
       "code": "SKF",
@@ -4009,7 +5871,14 @@
       "close_price": 97.8,
       "init_margin_amount": 31688,
       "open_interest": 852.0,
-      "volume": 417.0
+      "volume": 417.0,
+      "change": 0.6,
+      "change_pct": 0.62,
+      "high": 100.0,
+      "low": 97.5,
+      "oi_change": -108.0,
+      "avg_volume_days": 4,
+      "avg_volume": 747.5
     },
     {
       "code": "SYF",
@@ -4024,7 +5893,14 @@
       "close_price": 473.5,
       "init_margin_amount": 153414,
       "open_interest": 98.0,
-      "volume": 32.0
+      "volume": 32.0,
+      "change": 18.5,
+      "change_pct": 4.07,
+      "high": 477.5,
+      "low": 447.5,
+      "oi_change": -10.0,
+      "avg_volume_days": 4,
+      "avg_volume": 19.0
     },
     {
       "code": "SZF",
@@ -4039,7 +5915,14 @@
       "close_price": 473.5,
       "init_margin_amount": 7671,
       "open_interest": 1481.0,
-      "volume": 546.0
+      "volume": 546.0,
+      "change": 20.0,
+      "change_pct": 4.4,
+      "high": 481.0,
+      "low": 465.5,
+      "oi_change": 75.0,
+      "avg_volume_days": 4,
+      "avg_volume": 396.2
     },
     {
       "code": "UAF",
@@ -4054,7 +5937,14 @@
       "close_price": 202.0,
       "init_margin_amount": 81810,
       "open_interest": 212.0,
-      "volume": 51.0
+      "volume": 51.0,
+      "change": 2.5,
+      "change_pct": 1.25,
+      "high": 206.0,
+      "low": 199.5,
+      "oi_change": -9.0,
+      "avg_volume_days": 4,
+      "avg_volume": 32.0
     },
     {
       "code": "UBF",
@@ -4069,7 +5959,14 @@
       "close_price": 809.0,
       "init_margin_amount": 327645,
       "open_interest": 266.0,
-      "volume": 96.0
+      "volume": 96.0,
+      "change": -3.0,
+      "change_pct": -0.37,
+      "high": 823.0,
+      "low": 809.0,
+      "oi_change": -19.0,
+      "avg_volume_days": 4,
+      "avg_volume": 100.0
     },
     {
       "code": "VKF",
@@ -4084,7 +5981,14 @@
       "close_price": 809.0,
       "init_margin_amount": 16383,
       "open_interest": 1375.0,
-      "volume": 246.0
+      "volume": 246.0,
+      "change": -1.0,
+      "change_pct": -0.12,
+      "high": 840.0,
+      "low": 809.0,
+      "oi_change": 3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 421.2
     },
     {
       "code": "UCF",
@@ -4099,7 +6003,14 @@
       "close_price": 72.5,
       "init_margin_amount": 23490,
       "open_interest": 93.0,
-      "volume": 88.0
+      "volume": 88.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 73.9,
+      "low": 71.5,
+      "oi_change": -14.0,
+      "avg_volume_days": 4,
+      "avg_volume": 52.5
     },
     {
       "code": "UEF",
@@ -4114,7 +6025,14 @@
       "close_price": 42.15,
       "init_margin_amount": 11381,
       "open_interest": 55.0,
-      "volume": 1.0
+      "volume": 1.0,
+      "change": -0.7,
+      "change_pct": -1.63,
+      "high": 42.15,
+      "low": 42.15,
+      "oi_change": -1.0,
+      "avg_volume_days": 4,
+      "avg_volume": 6.5
     },
     {
       "code": "UFF",
@@ -4129,7 +6047,14 @@
       "close_price": 70.2,
       "init_margin_amount": 22745,
       "open_interest": 2071.0,
-      "volume": 480.0
+      "volume": 480.0,
+      "change": -0.5,
+      "change_pct": -0.71,
+      "high": 71.2,
+      "low": 69.7,
+      "oi_change": -165.0,
+      "avg_volume_days": 4,
+      "avg_volume": 762.2
     },
     {
       "code": "UGF",
@@ -4144,7 +6069,14 @@
       "close_price": 627.0,
       "init_margin_amount": 203148,
       "open_interest": 2.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 0.2
     },
     {
       "code": "UIF",
@@ -4159,7 +6091,14 @@
       "close_price": 627.0,
       "init_margin_amount": 10158,
       "open_interest": 258.0,
-      "volume": 30.0
+      "volume": 30.0,
+      "change": -1.0,
+      "change_pct": -0.16,
+      "high": 634.0,
+      "low": 626.0,
+      "oi_change": -16.0,
+      "avg_volume_days": 4,
+      "avg_volume": 22.8
     },
     {
       "code": "UMF",
@@ -4174,7 +6113,14 @@
       "close_price": 4225.0,
       "init_margin_amount": 1711125,
       "open_interest": 142.0,
-      "volume": 20.0
+      "volume": 20.0,
+      "change": 175.0,
+      "change_pct": 4.32,
+      "high": 4225.0,
+      "low": 4105.0,
+      "oi_change": -3.0,
+      "avg_volume_days": 4,
+      "avg_volume": 57.5
     },
     {
       "code": "UOF",
@@ -4189,7 +6135,14 @@
       "close_price": 4225.0,
       "init_margin_amount": 85557,
       "open_interest": 3006.0,
-      "volume": 2061.0
+      "volume": 2061.0,
+      "change": 175.0,
+      "change_pct": 4.32,
+      "high": 4225.0,
+      "low": 4085.0,
+      "oi_change": -93.0,
+      "avg_volume_days": 4,
+      "avg_volume": 3256.2
     },
     {
       "code": "UPF",
@@ -4204,7 +6157,14 @@
       "close_price": 422.0,
       "init_margin_amount": 113941,
       "open_interest": 23.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 10.0
     },
     {
       "code": "UQF",
@@ -4219,7 +6179,14 @@
       "close_price": 422.0,
       "init_margin_amount": 5697,
       "open_interest": 362.0,
-      "volume": 28.0
+      "volume": 28.0,
+      "change": -3.0,
+      "change_pct": -0.71,
+      "high": 423.0,
+      "low": 422.0,
+      "oi_change": -18.0,
+      "avg_volume_days": 4,
+      "avg_volume": 60.8
     },
     {
       "code": "UTF",
@@ -4234,7 +6201,14 @@
       "close_price": 232.5,
       "init_margin_amount": 94163,
       "open_interest": 591.0,
-      "volume": 128.0
+      "volume": 128.0,
+      "change": 0.5,
+      "change_pct": 0.22,
+      "high": 242.5,
+      "low": 231.5,
+      "oi_change": 13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 159.5
     },
     {
       "code": "UUF",
@@ -4249,7 +6223,14 @@
       "close_price": 54.7,
       "init_margin_amount": 17723,
       "open_interest": 59.0,
-      "volume": 2.0
+      "volume": 2.0,
+      "change": -1.0,
+      "change_pct": -1.8,
+      "high": 54.7,
+      "low": 54.6,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 1.8
     },
     {
       "code": "UVF",
@@ -4264,7 +6245,14 @@
       "close_price": 6530.0,
       "init_margin_amount": 2644650,
       "open_interest": 29.0,
-      "volume": 11.0
+      "volume": 11.0,
+      "change": 35.0,
+      "change_pct": 0.53,
+      "high": 6650.0,
+      "low": 6650.0,
+      "oi_change": -8.0,
+      "avg_volume_days": 4,
+      "avg_volume": 5.5
     },
     {
       "code": "UWF",
@@ -4279,7 +6267,14 @@
       "close_price": 6530.0,
       "init_margin_amount": 132233,
       "open_interest": 1111.0,
-      "volume": 470.0
+      "volume": 470.0,
+      "change": -85.0,
+      "change_pct": -1.28,
+      "high": 6745.0,
+      "low": 6405.0,
+      "oi_change": -57.0,
+      "avg_volume_days": 4,
+      "avg_volume": 537.0
     },
     {
       "code": "UXF",
@@ -4294,7 +6289,14 @@
       "close_price": 44.45,
       "init_margin_amount": 18003,
       "open_interest": 361.0,
-      "volume": 95.0
+      "volume": 95.0,
+      "change": -0.15,
+      "change_pct": -0.34,
+      "high": 45.8,
+      "low": 44.45,
+      "oi_change": -20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 101.0
     },
     {
       "code": "UYF",
@@ -4309,7 +6311,14 @@
       "close_price": 220.5,
       "init_margin_amount": 89303,
       "open_interest": 375.0,
-      "volume": 70.0
+      "volume": 70.0,
+      "change": 1.5,
+      "change_pct": 0.68,
+      "high": 230.0,
+      "low": 220.5,
+      "oi_change": -13.0,
+      "avg_volume_days": 4,
+      "avg_volume": 112.0
     },
     {
       "code": "VAF",
@@ -4324,7 +6333,14 @@
       "close_price": 36.75,
       "init_margin_amount": 11907,
       "open_interest": 87.0,
-      "volume": 80.0
+      "volume": 80.0,
+      "change": -1.7,
+      "change_pct": -4.42,
+      "high": 37.95,
+      "low": 36.55,
+      "oi_change": -41.0,
+      "avg_volume_days": 4,
+      "avg_volume": 61.8
     },
     {
       "code": "VBF",
@@ -4339,7 +6355,14 @@
       "close_price": 45.0,
       "init_margin_amount": 18225,
       "open_interest": 990.0,
-      "volume": 265.0
+      "volume": 265.0,
+      "change": -0.2,
+      "change_pct": -0.44,
+      "high": 45.95,
+      "low": 44.9,
+      "oi_change": -148.0,
+      "avg_volume_days": 4,
+      "avg_volume": 281.2
     },
     {
       "code": "VCF",
@@ -4354,7 +6377,14 @@
       "close_price": 151.0,
       "init_margin_amount": 48924,
       "open_interest": 132.0,
-      "volume": 20.0
+      "volume": 20.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "high": 154.0,
+      "low": 150.5,
+      "oi_change": -9.0,
+      "avg_volume_days": 4,
+      "avg_volume": 27.5
     },
     {
       "code": "VEF",
@@ -4369,7 +6399,14 @@
       "close_price": 2205.0,
       "init_margin_amount": 893026,
       "open_interest": 171.0,
-      "volume": 99.0
+      "volume": 99.0,
+      "change": 36.0,
+      "change_pct": 1.66,
+      "high": 2268.0,
+      "low": 2167.0,
+      "oi_change": -16.0,
+      "avg_volume_days": 4,
+      "avg_volume": 64.5
     },
     {
       "code": "VFF",
@@ -4384,7 +6421,14 @@
       "close_price": 2205.0,
       "init_margin_amount": 44652,
       "open_interest": 2713.0,
-      "volume": 1035.0
+      "volume": 1035.0,
+      "change": 37.0,
+      "change_pct": 1.71,
+      "high": 2287.0,
+      "low": 2170.0,
+      "oi_change": -39.0,
+      "avg_volume_days": 4,
+      "avg_volume": 976.5
     },
     {
       "code": "VIF",
@@ -4399,7 +6443,14 @@
       "close_price": 694.0,
       "init_margin_amount": 187380,
       "open_interest": 213.0,
-      "volume": 71.0
+      "volume": 71.0,
+      "change": 6.0,
+      "change_pct": 0.87,
+      "high": 710.0,
+      "low": 692.0,
+      "oi_change": 20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 90.0
     },
     {
       "code": "VLF",
@@ -4414,7 +6465,14 @@
       "close_price": 106.0,
       "init_margin_amount": 34344,
       "open_interest": 456.0,
-      "volume": 93.0
+      "volume": 93.0,
+      "change": -2.5,
+      "change_pct": -2.3,
+      "high": 108.5,
+      "low": 106.0,
+      "oi_change": 20.0,
+      "avg_volume_days": 4,
+      "avg_volume": 118.8
     },
     {
       "code": "VMF",
@@ -4429,7 +6487,14 @@
       "close_price": 724.0,
       "init_margin_amount": 293220,
       "open_interest": 0.0,
-      "volume": 0.0
+      "volume": 0.0,
+      "change": null,
+      "change_pct": null,
+      "high": null,
+      "low": null,
+      "oi_change": 0.0,
+      "avg_volume_days": 4,
+      "avg_volume": 0.0
     },
     {
       "code": "VNF",
@@ -4444,7 +6509,14 @@
       "close_price": 724.0,
       "init_margin_amount": 14662,
       "open_interest": 164.0,
-      "volume": 79.0
+      "volume": 79.0,
+      "change": -2.0,
+      "change_pct": -0.28,
+      "high": 740.0,
+      "low": 724.0,
+      "oi_change": -12.0,
+      "avg_volume_days": 4,
+      "avg_volume": 177.0
     }
   ]
 }
