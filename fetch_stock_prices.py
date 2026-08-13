@@ -30,7 +30,7 @@
   "symbols": {
     "2330": {
       "symbol": "2330", "name": "台積電", "market": "TWSE",
-      "close": 0, "open": 0, "high": 0, "low": 0, "volume": 0,
+      "close": 0, "open": 0, "high": 0, "low": 0, "volume": 0, "value": 0,
       "tradeDate": "YYYY-MM-DD", "source": "TWSE", "status": "fresh"
     }
   },
@@ -50,6 +50,7 @@
 """
 
 import csv
+import glob
 import io
 import json
 import re
@@ -146,6 +147,7 @@ def fetch_twse(errors):
             "high": to_number(row.get("HighestPrice")),
             "low": to_number(row.get("LowestPrice")),
             "volume": to_number(row.get("TradeVolume")),
+            "value": to_number(row.get("TradeValue")),
             "tradeDate": td,
             "source": "TWSE",
             "status": "fresh",
@@ -216,6 +218,23 @@ def load_previous_latest():
         return None
 
 
+def build_trade_dates_index():
+    """掃描目前資料夾裡有的 stock_prices_YYYY-MM-DD.json 快照,
+    產生 trade_dates.json(日期由新到舊排序),
+    給網頁端知道「有哪幾天的快照可以抓」,不用網頁自己列資料夾(靜態網頁做不到這件事)。"""
+    dates = set()
+    for filename in glob.glob("stock_prices_????-??-??.json"):
+        m = re.search(r"stock_prices_(\d{4}-\d{2}-\d{2})\.json$", filename)
+        if m:
+            dates.add(m.group(1))
+
+    sorted_dates = sorted(dates, reverse=True)
+    with open("trade_dates.json", "w", encoding="utf-8") as f:
+        json.dump({"dates": sorted_dates}, f, ensure_ascii=False, indent=2)
+
+    return sorted_dates
+
+
 def main():
     errors = []
 
@@ -275,6 +294,10 @@ def main():
     stale_count = sum(1 for r in combined.values() if r.get("status") == "stale")
     print(f"\n完成!共 {len(combined)} 檔股票(新鮮 {fresh_count} 檔、沿用舊資料 {stale_count} 檔)")
     print(f"已輸出 {dated_filename} 與 stock_prices_latest.json")
+
+    trade_dates = build_trade_dates_index()
+    print(f"已更新 trade_dates.json,目前累積 {len(trade_dates)} 個交易日的快照")
+
     if errors:
         print("\n本次錯誤紀錄:")
         for e in errors:
