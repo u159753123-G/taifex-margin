@@ -21,6 +21,14 @@
   契約乘數: 一般股票期貨 = 2000 股/口;小型股票期貨 = 100 股/口
            (依中文簡稱是否含「小型」判斷)
 
+  漲跌、漲跌%、最高價、最低價:期交所每日行情本來就有,直接讀,不用自己算。
+  OI增減:今天的未沖銷契約數 - 最近一份過去快照的未沖銷契約數。
+  N日均量(avg_volume):累積幾天算幾天(最多 20 天),搭配 avg_volume_days
+    這個欄位告訴前端「這是幾日均量」,累積不到 20 天就老實標出實際天數,
+    滿 20 天後自動變成真正的 20日均量。歷史快照(margin_YYYY-MM-DD.json)
+    是資料來源,GitHub Actions 每次執行都會 checkout 到完整的 repo 歷史,
+    不需要另外做資料庫。
+
 輸出:
   margin_YYYY-MM-DD.json — 當天的歷史快照,不會被覆蓋,以後做漲跌/OI增減會需要
   margin_latest.json     — 給 index.html 讀取用的「最新一筆」資料檔
@@ -38,9 +46,11 @@
 """
 
 import csv
+import glob
 import io
 import json
 import math
+import os
 import re
 import sys
 import urllib.request
@@ -137,6 +147,30 @@ def normalize_date(s):
     return s
 
 
+def load_previous_snapshots(exclude_date_tag, max_days=19):
+    """
+    讀取之前存下來的 margin_YYYY-MM-DD.json 歷史快照(不含今天這份),
+    依日期由新到舊排序,最多回傳 max_days 筆。
+    回傳格式: [(日期字串, {代碼: 該檔契約當天的完整資料}), ...]
+    """
+    snapshots = []
+    for path in glob.glob("margin_????-??-??.json"):
+        fname = os.path.basename(path)
+        date_str = fname[len("margin_"):-len(".json")]
+        if date_str == exclude_date_tag:
+            continue
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            continue
+        contracts_by_code = {c["code"]: c for c in data.get("contracts", [])}
+        snapshots.append((date_str, contracts_by_code))
+
+    snapshots.sort(key=lambda x: x[0], reverse=True)
+    return snapshots[:max_days]
+
+
 def main():
     print("== 步驟 1: 下載保證金適用比例表 ==")
     margin_raw = fetch_bytes(MARGIN_URL)
@@ -174,6 +208,10 @@ def main():
     d_col_date = find_col(daily_fields, ["交易日期", "日期"])
     d_col_oi = find_col(daily_fields, ["未沖銷契約數", "未沖銷"])
     d_col_volume = find_col(daily_fields, ["成交量"])
+    d_col_change = find_col(daily_fields, ["漲跌價"])
+    d_col_change_pct = find_col(daily_fields, ["漲跌%", "漲跌幅"])
+    d_col_high = find_col(daily_fields, ["最高價"])
+    d_col_low = find_col(daily_fields, ["最低價"])
 
     trade_date = None
     price_by_code = {}
@@ -194,6 +232,10 @@ def main():
                     "expiry": expiry,
                     "open_interest": to_float(row.get(d_col_oi)) if d_col_oi else None,
                     "volume": to_float(row.get(d_col_volume)) if d_col_volume else None,
+                    "change": to_float(row.get(d_col_change)) if d_col_change else None,
+                    "change_pct": to_float(row.get(d_col_change_pct)) if d_col_change_pct else None,
+                    "high": to_float(row.get(d_col_high)) if d_col_high else None,
+                    "low": to_float(row.get(d_col_low)) if d_col_low else None,
                 }
     else:
         print("!! 每日行情欄位比對失敗,margin_latest.json 會先只輸出保證金比例,沒有金額。")
@@ -269,9 +311,44 @@ def main():
             "init_margin_amount": init_amount,
             "open_interest": price_info["open_interest"] if price_info else None,
             "volume": price_info["volume"] if price_info else None,
+            "change": price_info["change"] if price_info else None,
+            "change_pct": price_info["change_pct"] if price_info else None,
+            "high": price_info["high"] if price_info else None,
+            "low": price_info["low"] if price_info else None,
         })
 
     date_tag = trade_date or datetime.now().strftime("%Y-%m-%d")
+
+    print("\n== 步驟 4: 讀取歷史快照,計算 OI 增減 / N日均量 ==")
+    previous_snapshots = load_previous_snapshots(date_tag, max_days=19)
+    print(f"[診斷] 找到 {len(previous_snapshots)} 份過去的快照可用(不含今天)。")
+
+    prev_oi_by_code = {}
+    if previous_snapshots:
+        _, latest_prev_contracts = previous_snapshots[0]
+        for code, c in latest_prev_contracts.items():
+            prev_oi_by_code[code] = c.get("open_interest")
+
+    for row in result:
+        code = row["code"]
+
+        # OI 增減:今天未平倉 - 最近一份過去快照的未平倉
+        prev_oi = prev_oi_by_code.get(code)
+        if row.get("open_interest") is not None and prev_oi is not None:
+            row["oi_change"] = row["open_interest"] - prev_oi
+        else:
+            row["oi_change"] = None
+
+        # N 日均量:今天 + 最近幾天過去快照的成交量,最多湊到 20 天
+        vols = [row["volume"]] if row.get("volume") is not None else []
+        for _, contracts_by_code in previous_snapshots:
+            if len(vols) >= 20:
+                break
+            c = contracts_by_code.get(code)
+            if c and c.get("volume") is not None:
+                vols.append(c["volume"])
+        row["avg_volume_days"] = len(vols)
+        row["avg_volume"] = round(sum(vols) / len(vols), 1) if vols else None
 
     out = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
