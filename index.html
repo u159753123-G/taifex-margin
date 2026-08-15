@@ -472,6 +472,10 @@ async function loadPersistenceData() {
       .filter(s => s.market === 'TWSE' && s.value != null)
       .sort((a, b) => b.value - a.value)
       .slice(0, 15);
+    // 舊版快照沒有 value 欄位(成交金額)時,這裡會是空陣列 ——
+    // 這種情況要當成「這天沒有可用資料」(跟抓取失敗一樣處理),
+    // 不能當成「合法的空清單」,不然交集運算會被污染成永遠是空的。
+    if (!list.length) return null;
     list.forEach(s => { PERSIST_NAME_LOOKUP[s.symbol] = s.name; });
     return new Set(list.map(s => s.symbol));
   });
