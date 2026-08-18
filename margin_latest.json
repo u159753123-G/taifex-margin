@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T11:59:06",
+  "generated_at": "2026-08-18T12:50:52",
   "trade_date": "2026-08-17",
   "source": {
     "margin_ratio": "https://www.taifex.com.tw/data_gov/taifex_open_data.asp?data_name=SingleStockFuturesMargining",
@@ -6518,5 +6518,31 @@
       "avg_volume_days": 6,
       "avg_volume": 128.5
     }
-  ]
+  ],
+  "index_futures": {
+    "TX": {
+      "code": "TX",
+      "name": "臺股期貨(大台)",
+      "close": 45867.0,
+      "change": 76.0,
+      "change_pct": 0.17,
+      "high": 46140.0,
+      "low": 45738.0,
+      "open_interest": 51167.0,
+      "volume": 79450.0,
+      "expiry": "202608"
+    },
+    "MTX": {
+      "code": "MTX",
+      "name": "小型臺指期貨(小台)",
+      "close": 45867.0,
+      "change": 66.0,
+      "change_pct": 0.14,
+      "high": 46141.0,
+      "low": 45739.0,
+      "open_interest": 22895.0,
+      "volume": 87579.0,
+      "expiry": "202608"
+    }
+  }
 }
