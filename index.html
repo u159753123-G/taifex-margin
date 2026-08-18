@@ -5,6 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>股期排行</title>
 <style>
+  /* D-DIN 本機字型(OFL-1.1 授權,授權全文見 licenses/d-din/)。
+     壓縮包裡只有 Bold 一種粗細,沒有 Regular,所以只能宣告 weight:700,
+     用 .ddin 的地方畫面上會是粗體,這是素材本身的限制,不是漏宣告。 */
+  @font-face {
+    font-family: 'D-DIN';
+    src: url('fonts/D-DIN-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  /* Condensed 壓縮包裡只有 Regular,沒有 Bold,所以只宣告 weight:400。 */
+  @font-face {
+    font-family: 'D-DIN Condensed';
+    src: url('fonts/D-DINCondensed.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  .ddin {
+    font-family: 'D-DIN', 'SF Mono', Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums slashed-zero;
+    font-weight: 700;
+  }
+  /* 交易明細表欄位擁擠時用這個,寬度比較窄 */
+  .ddin-condensed {
+    font-family: 'D-DIN Condensed', 'D-DIN', 'SF Mono', Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums slashed-zero;
+    font-weight: 400;
+  }
+
   :root {
     --bg: #0f1115;
     --card: #171a21;
@@ -230,6 +260,117 @@
   .persist-result li:last-child { border-bottom: none; }
   .persist-result li span:first-child { color: var(--sub); }
   .persist-empty { color: var(--sub); font-size: 12px; line-height: 1.5; }
+
+  .hedge-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 860px) {
+    .hedge-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .hedge-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .hedge-card h2 { font-size: 14px; margin: 0 0 12px; font-weight: 600; }
+  .hedge-card .field { margin-bottom: 10px; }
+  .hedge-card label {
+    display: block;
+    font-size: 11px;
+    color: var(--sub);
+    margin-bottom: 4px;
+  }
+  .hedge-card input {
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+  }
+  .hedge-card input:focus { outline: none; border-color: var(--accent); }
+  .hedge-hint { font-size: 11px; color: var(--sub); line-height: 1.6; margin-top: 8px; }
+  .hedge-result-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .hedge-result-box {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .hedge-result-box .lbl { font-size: 11px; color: var(--sub); }
+  .hedge-result-box .val { font-size: 18px; font-weight: 700; color: var(--accent); margin-top: 2px; }
+
+  .mode-picker {
+    display: flex;
+    gap: 4px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+    margin-bottom: 14px;
+    max-width: 460px;
+  }
+  .mode-picker button {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--sub);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .mode-picker button.active { background: var(--accent); color: #171a21; }
+  .scenario-field {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: var(--sub);
+  }
+  .scenario-field.show { display: flex; }
+  .scenario-field input {
+    width: 70px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 13px;
+  }
+
+  .hedge-table { border-collapse: collapse; width: 100%; }
+  .hedge-table th {
+    text-align: right;
+    padding: 8px 10px;
+    color: var(--sub);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .hedge-table th:first-child { text-align: left; }
+  .hedge-table td {
+    padding: 8px 10px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .hedge-table td:first-child { text-align: left; }
+  .hedge-table tr.recommended { background: rgba(224,161,60,0.08); }
+  .hedge-note { font-size: 11px; color: var(--sub); line-height: 1.7; margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -240,6 +381,7 @@
   <div class="tabs">
     <button class="tab active" data-view="futures">股期排行</button>
     <button class="tab" data-view="value-rank">成交值排行</button>
+    <button class="tab" data-view="hedge">避險小工具</button>
   </div>
 
   <div class="view active" id="view-futures">
@@ -327,6 +469,91 @@
       </aside>
     </div>
   </div>
+
+  <div class="view" id="view-hedge">
+    <div class="hedge-grid">
+      <div class="hedge-card">
+        <h2>避險參數</h2>
+        <div class="field">
+          <label>要保護的市值(元,負值=淨空方)</label>
+          <input type="number" id="h-value" value="0" step="1000">
+        </div>
+        <div class="field">
+          <label>組合 Beta(先手動輸入,個股250日迴歸自動算是下一階段)</label>
+          <input type="number" id="h-beta" value="1" step="0.01">
+        </div>
+        <div class="field">
+          <label>避險比率 %</label>
+          <input type="number" id="h-ratio" value="100" step="5">
+        </div>
+        <div class="hedge-result-row">
+          <div class="hedge-result-box">
+            <div class="lbl">需對沖名目</div>
+            <div class="val ddin" id="h-notional">—</div>
+          </div>
+          <div class="hedge-result-box">
+            <div class="lbl" id="h-loss-label">預期損失</div>
+            <div class="val ddin" id="h-loss">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hedge-card">
+        <h2>避險工具報價(可自行修改)</h2>
+        <div class="field">
+          <label>台指期價格(點) — <span id="h-price-source">尚未讀到自動資料</span></label>
+          <input type="number" id="h-price" value="0" step="1">
+        </div>
+        <div class="field">
+          <label>賣權履約價(點)</label>
+          <input type="number" id="h-strike" value="0" step="50">
+        </div>
+        <div class="field">
+          <label>賣權權利金(點)</label>
+          <input type="number" id="h-premium" value="0" step="0.5">
+        </div>
+        <div class="field">
+          <label>賣權 Delta</label>
+          <input type="number" id="h-delta" value="0.5" step="0.05" min="0" max="1">
+        </div>
+        <div class="hedge-hint">
+          選擇權避險以「買進台指選擇權(TXO)賣權」為工具,乘數 50 元/點。台指期價格預設帶入 margin_latest.json
+          裡的大台(TX)最新收盤價,可自行改成盤中價;權利金與 Delta 站上不提供報價,請自行輸入看盤軟體實際值。
+        </div>
+      </div>
+    </div>
+
+    <div class="mode-picker" id="h-mode-picker">
+      <button data-mode="value" class="active">市值避險</button>
+      <button data-mode="delta">Delta 避險</button>
+      <button data-mode="scenario">情境避險</button>
+    </div>
+    <div class="scenario-field" id="h-scenario-field">
+      持股平均下跌
+      <input type="number" id="h-drop" value="3" step="0.5">
+      % 時完全避掉損失
+    </div>
+
+    <div class="table-scroll">
+      <table class="hedge-table">
+        <thead>
+          <tr>
+            <th>避險工具</th>
+            <th>參考價</th>
+            <th id="h-col3">建議口數</th>
+            <th id="h-col4">對沖後殘餘</th>
+            <th>保證金/權利金成本</th>
+          </tr>
+        </thead>
+        <tbody id="h-tbody"></tbody>
+      </table>
+    </div>
+    <div class="hedge-note">
+      殘餘 &gt; 0 代表避險不足、&lt; 0 代表過度避險(口數只能取整數造成)。市值避險/Delta避險為線性等比例保護；
+      情境避險是回答「持股平均跌 X% 時,要多少避險部位才能完全避掉損失」,以完全避掉為目標,不套用避險比率。
+      這裡的數字僅供試算參考,不是投資建議,也還沒把賣權的即時報價自動接進來。
+    </div>
+  </div>
 </div>
 
 <script>
@@ -375,6 +602,8 @@ Promise.all([
 ]).then(([marginData, stockData]) => {
   const symbols = (stockData && stockData.symbols) || {};
   STOCK_SYMBOLS = symbols;
+  window.__MARGIN_DATA__ = marginData;
+  initHedgeTool(marginData);
 
   ROWS = (marginData.contracts || []).map(c => {
     const spot = symbols[c.stock_no] || null;
@@ -389,6 +618,7 @@ Promise.all([
       ...c,
       display_name: c.name,
       underlying_display: c.stock_no + (spot ? ' ' + spot.name : ''),
+      underlying_name: spot ? spot.name : '',
       spot_price: spotPrice,
       spread,
       amplitude,
@@ -399,7 +629,7 @@ Promise.all([
   const meta = document.getElementById('meta');
   const genAt = marginData.generated_at || '未知';
   const tradeDate = marginData.trade_date || '未知';
-  meta.textContent = `交易日: ${tradeDate} · 資料產生時間: ${genAt} · 共 ${ROWS.length} 檔股票期貨`;
+  meta.innerHTML = `交易日: <span class="ddin">${tradeDate}</span> · 資料產生時間: <span class="ddin">${genAt}</span> · 共 <span class="ddin">${ROWS.length}</span> 檔股票期貨`;
 
   renderHead();
   render();
@@ -425,13 +655,13 @@ function renderValueRank() {
     return;
   }
 
-  meta.textContent = `交易日: ${STOCK_SYMBOLS ? (Object.values(STOCK_SYMBOLS)[0]?.tradeDate || '未知') : '未知'} · 僅計算上市(TWSE)股票`;
+  meta.innerHTML = `交易日: <span class="ddin">${STOCK_SYMBOLS ? (Object.values(STOCK_SYMBOLS)[0]?.tradeDate || '未知') : '未知'}</span> · 僅計算上市(TWSE)股票`;
 
   tbody.innerHTML = top15.map(s => `
     <tr>
-      <td>${s.symbol}</td>
+      <td class="ddin">${s.symbol}</td>
       <td>${s.name || '—'}</td>
-      <td>${fmt(s.close, 2)}</td>
+      <td class="ddin">${fmt(s.close, 2)}</td>
     </tr>
   `).join('');
 }
@@ -505,7 +735,7 @@ function renderPersistWindow() {
   result.innerHTML = `
     <h3>連續 ${w} 天留榜(${codes.length} 檔)</h3>
     ${codes.length
-      ? `<ul>${codes.map(c => `<li><span>${c}</span><span>${PERSIST_NAME_LOOKUP[c] || ''}</span></li>`).join('')}</ul>`
+      ? `<ul>${codes.map(c => `<li><span class="ddin">${c}</span><span>${PERSIST_NAME_LOOKUP[c] || ''}</span></li>`).join('')}</ul>`
       : `<div class="persist-empty">目前沒有股票連續 ${w} 天都在前15名</div>`}
   `;
 }
@@ -595,12 +825,12 @@ function renderQuickAnswer(searchText) {
   box.innerHTML = matched.map(r => `
     <div class="quick-card">
       <div class="qc-name">${r.name}</div>
-      <div class="qc-sub">${r.code} · 每口 ${fmt(r.multiplier, 0)} 股 · ${r.underlying_display || '—'}</div>
+      <div class="qc-sub"><span class="ddin">${r.code}</span> · 每口 <span class="ddin">${fmt(r.multiplier, 0)}</span> 股 · ${r.stock_no ? `<span class="ddin">${r.stock_no}</span>` : ''}${r.underlying_name ? ' ' + r.underlying_name : (!r.stock_no ? '—' : '')}</div>
       <div class="qc-label">目前最低保證金(原始保證金)</div>
-      <div class="qc-amount">${r.init_margin_amount != null ? 'NT$' + fmt(r.init_margin_amount, 0) : '—'}</div>
+      <div class="qc-amount ddin">${r.init_margin_amount != null ? 'NT$' + fmt(r.init_margin_amount, 0) : '—'}</div>
       <div class="qc-row">
-        <span>成交價 <b>${fmt(r.close_price, 2)}</b></span>
-        <span>槓桿 <b>${r.leverage != null ? fmt(r.leverage, 2) + 'x' : '—'}</b></span>
+        <span>成交價 <b class="ddin">${fmt(r.close_price, 2)}</b></span>
+        <span>槓桿 <b class="ddin">${r.leverage != null ? fmt(r.leverage, 2) + 'x' : '—'}</b></span>
       </div>
     </div>
   `).join('');
@@ -635,21 +865,21 @@ function render() {
   for (const r of rows) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td class="name-cell"><b>${r.name}</b><span>${r.code} · ${r.tier || ''}</span></td>
-      <td>${fmt(r.close_price, 2)}</td>
-      <td class="${colorClass(r.change)}">${fmtSigned(r.change, 2)}</td>
-      <td class="${colorClass(r.change_pct)}">${fmtSigned(r.change_pct, 2, '%')}</td>
-      <td>${fmt(r.volume, 0)}</td>
-      <td>${fmt(r.avg_volume, 0)}<span style="color:var(--sub)"> (${r.avg_volume_days ?? 0}日)</span></td>
-      <td>${r.amplitude != null ? fmt(r.amplitude, 2) + '%' : '—'}</td>
-      <td>${fmt(r.open_interest, 0)}</td>
-      <td class="${colorClass(r.oi_change)}">${fmtSigned(r.oi_change, 0)}</td>
-      <td>${r.underlying_display || '—'}</td>
-      <td>${fmt(r.spot_price, 2)}</td>
-      <td class="${colorClass(r.spread)}">${fmtSigned(r.spread, 2)}</td>
-      <td>${fmt(r.init_margin_amount, 0)}</td>
-      <td>${fmt(r.multiplier, 0)}</td>
-      <td>${r.leverage != null ? fmt(r.leverage, 2) + 'x' : '—'}</td>
+      <td class="name-cell"><b>${r.name}</b><span><span class="ddin-condensed">${r.code}</span> · ${r.tier || ''}</span></td>
+      <td class="ddin-condensed">${fmt(r.close_price, 2)}</td>
+      <td class="ddin-condensed ${colorClass(r.change)}">${fmtSigned(r.change, 2)}</td>
+      <td class="ddin-condensed ${colorClass(r.change_pct)}">${fmtSigned(r.change_pct, 2, '%')}</td>
+      <td class="ddin-condensed">${fmt(r.volume, 0)}</td>
+      <td><span class="ddin-condensed">${fmt(r.avg_volume, 0)}</span><span style="color:var(--sub)"> (<span class="ddin-condensed">${r.avg_volume_days ?? 0}</span>日)</span></td>
+      <td class="ddin-condensed">${r.amplitude != null ? fmt(r.amplitude, 2) + '%' : '—'}</td>
+      <td class="ddin-condensed">${fmt(r.open_interest, 0)}</td>
+      <td class="ddin-condensed ${colorClass(r.oi_change)}">${fmtSigned(r.oi_change, 0)}</td>
+      <td>${r.stock_no ? `<span class="ddin-condensed">${r.stock_no}</span>` : '—'}${r.underlying_name ? ' ' + r.underlying_name : ''}</td>
+      <td class="ddin-condensed">${fmt(r.spot_price, 2)}</td>
+      <td class="ddin-condensed ${colorClass(r.spread)}">${fmtSigned(r.spread, 2)}</td>
+      <td class="ddin-condensed">${fmt(r.init_margin_amount, 0)}</td>
+      <td class="ddin-condensed">${fmt(r.multiplier, 0)}</td>
+      <td class="ddin-condensed">${r.leverage != null ? fmt(r.leverage, 2) + 'x' : '—'}</td>
     `;
     tbody.appendChild(tr);
   }
@@ -659,6 +889,216 @@ function render() {
   document.getElementById(id).addEventListener('input', render);
   document.getElementById(id).addEventListener('change', render);
 });
+
+// ============================================================
+// 避險小工具
+// 公式來源:比照「股期儀表板」避險小工具邏輯,原始網頁版本已核對過數字。
+//   需對沖名目 = 要保護的市值 × Beta × 避險比率
+//   市值避險口數 = 需對沖名目 ÷ (台指期價格 × 契約乘數),四捨五入
+//     契約乘數:大台200、小台50、微台10(元/點)
+//   賣權市值避險口數 = 需對沖名目 ÷ (台指期價格 × 50)
+//   賣權Delta避險口數 = 需對沖名目 ÷ (台指期價格 × 50 × |Delta|)
+//   情境避險:
+//     預期損失 = |要保護的市值| × 跌幅%
+//     對應大盤跌幅 = 跌幅% ÷ |Beta|
+//     期貨每口情境獲利 = 大盤跌點數 × 契約乘數,建議口數 = 損失 ÷ 每口獲利,無條件進位
+//     賣權情境淨獲利 = (履約價 − 跌後指數 − 權利金) × 50,建議口數 = 損失 ÷ 每口淨獲利,無條件進位
+// ============================================================
+
+const HEDGE_STORAGE_KEY = 'hedge-tool-params-v1';
+let hedgeMode = 'value';
+
+function loadHedgeParams() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(HEDGE_STORAGE_KEY) || '{}');
+    if (saved.value != null) document.getElementById('h-value').value = saved.value;
+    if (saved.beta != null) document.getElementById('h-beta').value = saved.beta;
+    if (saved.ratio != null) document.getElementById('h-ratio').value = saved.ratio;
+    if (saved.price != null) document.getElementById('h-price').value = saved.price;
+    if (saved.strike != null) document.getElementById('h-strike').value = saved.strike;
+    if (saved.premium != null) document.getElementById('h-premium').value = saved.premium;
+    if (saved.delta != null) document.getElementById('h-delta').value = saved.delta;
+    if (saved.drop != null) document.getElementById('h-drop').value = saved.drop;
+    if (saved.mode) hedgeMode = saved.mode;
+  } catch (e) { /* 忽略壞掉的本機資料 */ }
+}
+
+function saveHedgeParams() {
+  const data = {
+    value: document.getElementById('h-value').value,
+    beta: document.getElementById('h-beta').value,
+    ratio: document.getElementById('h-ratio').value,
+    price: document.getElementById('h-price').value,
+    strike: document.getElementById('h-strike').value,
+    premium: document.getElementById('h-premium').value,
+    delta: document.getElementById('h-delta').value,
+    drop: document.getElementById('h-drop').value,
+    mode: hedgeMode,
+  };
+  try { localStorage.setItem(HEDGE_STORAGE_KEY, JSON.stringify(data)); } catch (e) { /* 忽略 */ }
+}
+
+function initHedgeTool(marginData) {
+  loadHedgeParams();
+
+  const idx = (marginData && marginData.index_futures) || {};
+  const priceInput = document.getElementById('h-price');
+  const sourceLabel = document.getElementById('h-price-source');
+  const hasSavedPrice = (() => {
+    try { return JSON.parse(localStorage.getItem(HEDGE_STORAGE_KEY) || '{}').price != null; }
+    catch (e) { return false; }
+  })();
+
+  if (idx.TX && idx.TX.close != null) {
+    if (!hasSavedPrice || Number(priceInput.value) === 0) {
+      priceInput.value = idx.TX.close;
+    }
+    sourceLabel.textContent = `自動帶入大台(TX) ${idx.TX.close} 點,交易日 ${marginData.trade_date || '—'}`;
+  } else {
+    sourceLabel.textContent = 'margin_latest.json 目前沒有 index_futures.TX,請手動輸入(可能需要先跑新版 fetch_margin_data.py)';
+  }
+
+  document.querySelectorAll('#h-mode-picker button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === hedgeMode);
+    btn.addEventListener('click', () => {
+      hedgeMode = btn.dataset.mode;
+      document.querySelectorAll('#h-mode-picker button').forEach(b => b.classList.toggle('active', b === btn));
+      document.getElementById('h-scenario-field').classList.toggle('show', hedgeMode === 'scenario');
+      renderHedge();
+      saveHedgeParams();
+    });
+  });
+  document.getElementById('h-scenario-field').classList.toggle('show', hedgeMode === 'scenario');
+
+  ['h-value', 'h-beta', 'h-ratio', 'h-price', 'h-strike', 'h-premium', 'h-delta', 'h-drop'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => { renderHedge(); saveHedgeParams(); });
+  });
+
+  renderHedge();
+}
+
+function hFmt(n, digits) {
+  if (n === null || n === undefined || Number.isNaN(n)) return '—';
+  return Number(n).toLocaleString('zh-TW', { minimumFractionDigits: digits ?? 0, maximumFractionDigits: digits ?? 0 });
+}
+function hFmtSigned(n, digits) {
+  if (n === null || n === undefined || Number.isNaN(n)) return '—';
+  const sign = n > 0 ? '+' : '';
+  return sign + hFmt(n, digits);
+}
+
+function renderHedge() {
+  const value = parseFloat(document.getElementById('h-value').value) || 0;
+  const beta = parseFloat(document.getElementById('h-beta').value) || 0;
+  const ratioPct = parseFloat(document.getElementById('h-ratio').value);
+  const ratio = Number.isFinite(ratioPct) ? ratioPct / 100 : 1;
+  const txPrice = parseFloat(document.getElementById('h-price').value) || 0;
+  const strike = parseFloat(document.getElementById('h-strike').value) || 0;
+  const premium = parseFloat(document.getElementById('h-premium').value) || 0;
+  const delta = parseFloat(document.getElementById('h-delta').value) || 0;
+  const dropPct = parseFloat(document.getElementById('h-drop').value) || 0;
+
+  const isShortExposure = (value * beta) < 0; // 空方曝險:改用買期貨對沖,不適用買賣權
+  const notional = value * beta * ratio; // 需對沖名目(市值避險用,也是等效反向ETF買入金額的參考基準)
+
+  document.getElementById('h-notional').textContent = 'NT$' + hFmt(notional, 0);
+
+  const tbody = document.getElementById('h-tbody');
+  const col3 = document.getElementById('h-col3');
+  const col4 = document.getElementById('h-col4');
+  const lossLabel = document.getElementById('h-loss-label');
+  const lossBox = document.getElementById('h-loss');
+
+  const MULTS = { 大台: 200, 小台: 50, 微台: 10 };
+  const rows = [];
+
+  if (hedgeMode !== 'scenario') {
+    // ---- 市值避險 / Delta避險:線性等比例保護,口數不隨情境改變 ----
+    lossLabel.textContent = '需對沖名目(=左側數字)';
+    lossBox.textContent = 'NT$' + hFmt(notional, 0);
+    col3.textContent = '建議口數';
+    col4.textContent = '對沖名目覆蓋';
+
+    Object.entries(MULTS).forEach(([label, mult]) => {
+      if (txPrice <= 0) { rows.push([`台指期(${label})`, txPrice, '—', '—', '—']); return; }
+      const lots = Math.round(Math.abs(notional) / (txPrice * mult));
+      let covered = lots * txPrice * mult * Math.sign(notional || 1);
+      if (covered === 0) covered = 0; // 避免 -0 顯示成 "NT$-0"
+      rows.push([`台指期(${label})`, hFmt(txPrice, 0), hFmt(lots, 0), 'NT$' + hFmt(covered, 0), '0(保證金,另計)']);
+    });
+
+    if (!isShortExposure) {
+      if (hedgeMode === 'value') {
+        const lots = (txPrice > 0) ? Math.round(Math.abs(notional) / (txPrice * 50)) : null;
+        const covered = lots != null ? lots * txPrice * 50 * Math.sign(notional || 1) : null;
+        const cost = lots != null ? lots * premium * 50 : null;
+        rows.push(['TXO 買進賣權(市值避險)', hFmt(strike, 0), lots != null ? hFmt(lots, 0) : '—',
+          covered != null ? 'NT$' + hFmt(covered, 0) : '—', cost != null ? 'NT$' + hFmt(cost, 0) + '(權利金)' : '—']);
+      } else {
+        const lots = (txPrice > 0 && delta > 0) ? Math.round(Math.abs(notional) / (txPrice * 50 * Math.abs(delta))) : null;
+        const cost = lots != null ? lots * premium * 50 : null;
+        rows.push(['TXO 買進賣權(Delta避險)', hFmt(strike, 0), lots != null ? hFmt(lots, 0) : '—', '需定期再平衡',
+          cost != null ? 'NT$' + hFmt(cost, 0) + '(權利金)' : '—']);
+      }
+    } else {
+      rows.push(['TXO 買進賣權', '—', '空方曝險不適用', '改用買進期貨對沖', '—']);
+    }
+
+    rows.push(['等效反向ETF(比價用)', '—', '—', '—', 'NT$' + hFmt(Math.abs(notional), 0) + '(買入金額)']);
+  } else {
+    // ---- 情境避險:以「完全避掉指定跌幅損失」為目標,口數不套用避險比率 ----
+    const expectedLoss = Math.abs(value) * (dropPct / 100);
+    const indexDropPct = beta !== 0 ? (dropPct / 100) / Math.abs(beta) : null;
+    lossLabel.textContent = `持股 ${dropPct || 0}% 預期損失`;
+    lossBox.textContent = 'NT$' + hFmt(expectedLoss, 0);
+    col3.textContent = '建議口數(完全避掉)';
+    col4.textContent = '對沖後殘餘';
+
+    if (indexDropPct == null || txPrice <= 0) {
+      rows.push(['(請先輸入 Beta 與台指期價格)', '—', '—', '—', '—']);
+    } else if (isShortExposure) {
+      rows.push(['情境避險僅支援多方曝險', '—', '—', '—', '請改用市值避險買進期貨對沖空方部位']);
+    } else {
+      // 期貨是線性避險工具:情境避險口數其實跟市值避險用同一條公式(完整名目 ÷ (價格×乘數),四捨五入),
+      // 不是用「損失 ÷ 每口情境獲利」去無條件進位——那條公式只適用賣權(非線性)。
+      // 情境避險「不套用避險比率」,所以這裡固定用 100% 的完整名目(value × beta),不吃 h-ratio 那個輸入值。
+      const fullNotional = value * beta;
+      Object.entries(MULTS).forEach(([label, mult]) => {
+        const perLotProfit = indexDropPct * txPrice * mult; // 這口在此情境下的獲利,只用來算「對沖後殘餘」
+        const lots = txPrice > 0 ? Math.round(Math.abs(fullNotional) / (txPrice * mult)) : 0;
+        const hedgedProfit = lots * perLotProfit;
+        const remainder = expectedLoss - hedgedProfit;
+        rows.push([`台指期(${label})`, hFmt(txPrice, 0), hFmt(lots, 0), hFmtSigned(remainder, 0), '0(保證金,另計)']);
+      });
+
+      const underlyingAfterDrop = txPrice * (1 - indexDropPct);
+      const putProfitPerLot = (strike - underlyingAfterDrop - premium) * 50;
+      let putRow;
+      if (putProfitPerLot > 0) {
+        const putLots = Math.ceil(expectedLoss / putProfitPerLot);
+        const hedgedProfit = putLots * putProfitPerLot;
+        const remainder = expectedLoss - hedgedProfit;
+        const cost = putLots * premium * 50;
+        putRow = ['TXO 買進賣權', hFmt(strike, 0), hFmt(putLots, 0), hFmtSigned(remainder, 0), 'NT$' + hFmt(cost, 0) + '(權利金)'];
+      } else {
+        putRow = ['TXO 買進賣權', hFmt(strike, 0), '履約價太低,情境內無獲利', '—', '—'];
+      }
+      rows.push(putRow);
+      rows.push(['等效反向ETF(比價用)', '—', '—', '—', 'NT$' + hFmt(Math.abs(notional), 0) + '(買入金額,參考市值避險口徑)']);
+    }
+  }
+
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td>${r[0]}</td>
+      <td class="ddin-condensed">${r[1]}</td>
+      <td class="ddin-condensed">${r[2]}</td>
+      <td class="ddin-condensed">${r[3]}</td>
+      <td class="ddin-condensed">${r[4]}</td>
+    </tr>
+  `).join('');
+}
+
 </script>
 </body>
 </html>
