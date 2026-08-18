@@ -317,6 +317,37 @@ def main():
             "low": price_info["low"] if price_info else None,
         })
 
+    print("\n== 步驟 3b: 擷取台指期(大台/小台/微台)價格 ==")
+    # DailyMarketReportFut 這份每日行情本來就包含全部期貨商品(不只股票期貨),
+    # price_by_code 在步驟 2 已經抓過近月價格,這裡直接挑出指數期貨三檔,
+    # 不用另外呼叫 API。避險小工具的「台指期價格」欄位就是吃這裡。
+    INDEX_FUTURES_NAMES = {
+        "TX": "臺股期貨(大台)",
+        "MTX": "小型臺指期貨(小台)",
+        "MXF": "微型臺指期貨(微台)",
+    }
+    index_futures = {}
+    for code, display_name in INDEX_FUTURES_NAMES.items():
+        info = price_by_code.get(code)
+        if not info:
+            continue
+        index_futures[code] = {
+            "code": code,
+            "name": display_name,
+            "close": info.get("close"),
+            "change": info.get("change"),
+            "change_pct": info.get("change_pct"),
+            "high": info.get("high"),
+            "low": info.get("low"),
+            "open_interest": info.get("open_interest"),
+            "volume": info.get("volume"),
+            "expiry": info.get("expiry"),
+        }
+    print("[診斷] 台指期價格擷取結果:", {k: v["close"] for k, v in index_futures.items()})
+    if not index_futures:
+        print("!! 沒有抓到 TX/MTX/MXF,可能是代碼命名跟預期不同,"
+              "請把上面『每日行情前 20 個不重複代碼』貼給我確認正確代碼。")
+
     date_tag = trade_date or datetime.now().strftime("%Y-%m-%d")
 
     print("\n== 步驟 4: 讀取歷史快照,計算 OI 增減 / N日均量 ==")
@@ -358,6 +389,7 @@ def main():
             "daily_price": DAILY_URL,
         },
         "contracts": result,
+        "index_futures": index_futures,
     }
 
     dated_filename = f"margin_{date_tag}.json"
