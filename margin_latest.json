@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T12:37:43",
+  "generated_at": "2026-10-15T15:33:57",
   "trade_date": "2026-10-15",
   "source": {
     "margin_ratio": "https://www.taifex.com.tw/data_gov/taifex_open_data.asp?data_name=SingleStockFuturesMargining",
@@ -4831,11 +4831,11 @@
       "underlying": "8358",
       "tier": "",
       "multiplier": 2000,
-      "settle_pct": 34.0,
-      "maint_pct": 35.19,
-      "init_pct": 45.9,
+      "settle_pct": 17.0,
+      "maint_pct": 17.6,
+      "init_pct": 22.95,
       "close_price": 463.0,
-      "init_margin_amount": 425034,
+      "init_margin_amount": 212517,
       "open_interest": 3924.0,
       "volume": 1919.0,
       "change": -40.0,
